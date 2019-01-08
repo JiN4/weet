@@ -13,6 +13,6 @@ func CreateSample(sample Sample) (Sample, error) {
 
 func GetSampleById(sampleId uint) (service.Sample, error) {
 	sample := service.Sample{}
-	err := db.Find(&sample, sampleId).Error
+	err := db.Where("id = ?", sampleId).First(&sample).Error
 	return sample, err
 }
