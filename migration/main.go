@@ -10,6 +10,19 @@ func main() {
 	db := model.GetDBConn()
 
 	// migrate
+
+	db.DropTableIfExists(&model.Sample{})
+	db.DropTableIfExists(&model.UserBasics{})
+	db.DropTableIfExists(&model.UserQuestionAndAnswer{})
+	db.DropTableIfExists(&model.Question{})
+	db.DropTableIfExists(&model.Answer{})
+	db.DropTableIfExists(&model.Format{})
+
 	db.CreateTable(&model.Sample{})
+	db.CreateTable(&model.UserBasics{})
+	db.CreateTable(&model.UserQuestionAndAnswer{})
+	db.CreateTable(&model.Question{})
+	db.CreateTable(&model.Answer{})
+	db.CreateTable(&model.Format{})
 
 }

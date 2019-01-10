@@ -1,21 +1,58 @@
 package model
 
 import (
-	"time"
-	_ "time"
+	"github.com/jinzhu/gorm"
 )
 
-// //model内で共通のfieldをここに抜き出す
 //type //model struct {
-
+//    ID      uint `gorm:"primary_key"`
+//    CreatedAt time.Time
+//    UpdatedAt time.Time
 //}
 
-// 自分のユーザー情報
+// Sample情報
 type Sample struct {
-	//Model
-	ID        uint `gorm:"primary_key" json:"id"`
-	CreatedAt time.Time
-	UpdatedAt time.Time
-	Name      string `gorm:"not null"`
-	Comment   string `gorm:"not null"`
+	gorm.Model
+	Name    string `gorm:"not null"`
+	Comment string `gorm:"not null"`
+}
+
+//基本的なユーザ情報
+type UserBasics struct {
+	gorm.Model
+	UserName string `gorm:"not null"`
+	Image1   string `gorm:"not null"`
+	Image2   string `gorm:"not null"`
+	Image3   string `gorm:"not null"`
+	Age      string `gorm:"not null"`
+	Hitokoto string `gorm:"not null"`
+	Comment  string `gorm:"not null"`
+}
+
+//ユーザごとの質疑応答
+type UserQuestionAndAnswer struct {
+	gorm.Model
+	UserID     uint `gorm:"not null"`
+	QuestionID uint `gorm:"not null"`
+	AnswerID   uint `gorm:"not null"`
+}
+
+//マイページの質問
+type Question struct {
+	ID       uint   `gorm:"primary_key"`
+	FormatID uint   `gorm:"not null"`
+	Name     string `gorm:"not null"`
+}
+
+//マイページの質問の答えの選択肢
+type Answer struct {
+	ID         uint   `gorm:"primary_key"`
+	QuestionID uint   `gorm:"not null"`
+	Name       string `gorm:"not null"`
+}
+
+//マッチング形式
+type Format struct {
+	ID   uint   `gorm:"primary_key"`
+	Name string `gorm:"not null"`
 }
