@@ -17,6 +17,7 @@ func main() {
 	db.DropTableIfExists(&model.Question{})
 	db.DropTableIfExists(&model.Answer{})
 	db.DropTableIfExists(&model.Format{})
+	db.DropTableIfExists(&model.Question2{})
 
 	db.CreateTable(&model.Sample{})
 	db.CreateTable(&model.Question{})
@@ -25,5 +26,7 @@ func main() {
 	db.CreateTable(&model.UserBasics{})
 	db.CreateTable(&model.UserQuestionAndAnswer{})
 	db.CreateTable(&model.Question2{})
+	db.CreateTable(&model.Test1{})
+	db.CreateTable(&model.Test2{})
 
 }

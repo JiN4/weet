@@ -64,3 +64,14 @@ type Question2 struct {
 	AnswerID uint
 	Answer   []Answer `gorm:"foreignkey:AnswerID"`
 }
+
+type Test1 struct {
+	gorm.Model
+	Tests2 []Test2 `gorm:"foreignkey:UserRefer"`
+}
+
+type Test2 struct {
+	gorm.Model
+	Number    string
+	UserRefer uint
+}
