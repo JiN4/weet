@@ -21,29 +21,28 @@ type Sample struct {
 type UserBasics struct {
 	gorm.Model
 	UserName string `gorm:"not null"`
-	Image1   string `gorm:"not null"`
-	Image2   string `gorm:"not null"`
-	Image3   string `gorm:"not null"`
-	Age      string `gorm:"not null"`
-	Hitokoto string `gorm:"not null"`
-	Comment  string `gorm:"not null"`
+	Image1   string
+	Image2   string
+	Image3   string
+	Age      uint `gorm:"not null"`
+	Hitokoto string
+	Comment  string
 }
 
 //ユーザごとの質疑応答
 type UserQuestionAndAnswer struct {
 	gorm.Model
-	UserID     uint     `gorm:"not null"`
-	QuestionID uint     `gorm:"not null"`
-	AnswerID   uint     `gorm:"not null"`
+	UserID     uint `gorm:"not null"`
+	QuestionID uint `gorm:"not null"`
+	AnswerID   uint
 	Question   Question `gorm:"foreignkey:QuestionID"`
 	Answer     Answer   `gorm:"foreignkey:AnswerID"`
 }
 
 //マイページの質問
 type Question struct {
-	ID       uint   `gorm:"primary_key"`
-	FormatID uint   `gorm:"not null"`
-	Name     string `gorm:"not null"`
+	ID   uint   `gorm:"primary_key"`
+	Name string `gorm:"not null"`
 }
 
 //マイページの質問の答えの選択肢
@@ -57,4 +56,11 @@ type Answer struct {
 type Format struct {
 	ID   uint   `gorm:"primary_key"`
 	Name string `gorm:"not null"`
+}
+
+type Question2 struct {
+	ID       uint   `gorm:"primary_key"`
+	Name     string `gorm:"not null"`
+	AnswerID uint
+	Answer   []Answer `gorm:"foreignkey:AnswerID"`
 }

@@ -24,5 +24,6 @@ func main() {
 	db.CreateTable(&model.Format{})
 	db.CreateTable(&model.UserBasics{})
 	db.CreateTable(&model.UserQuestionAndAnswer{})
+	db.CreateTable(&model.Question2{})
 
 }

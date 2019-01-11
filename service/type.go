@@ -32,8 +32,8 @@ type Format struct {
 
 //１セットの質疑応答
 type QuestionAndAnswer struct {
-	Question string `json:"question"`
-	Answer   string `json:"answer"`
+	QuestionName string `json:"question_name"`
+	AnswerName   string `json:"answer_name"`
 }
 
 /*

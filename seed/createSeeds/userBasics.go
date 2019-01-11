@@ -2,6 +2,7 @@ package createSeeds
 
 import (
 	"fmt"
+	"strconv"
 
 	"github.com/weet/model"
 )
@@ -31,12 +32,13 @@ func CreateSeedUserBasics() {
 	}
 
 	for _, info := range userBasics_infos {
+		age, _ := strconv.Atoi(info["Age"])
 		createUserBasics(model.UserBasics{
 			UserName: info["UserName"],
 			Image1:   info["Image1"],
 			Image2:   info["Image2"],
 			Image3:   info["Image3"],
-			Age:      info["Age"],
+			Age:      uint(age),
 			Hitokoto: info["Hitokoto"],
 			Comment:  info["Comment"],
 		})
