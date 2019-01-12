@@ -1,6 +1,6 @@
 package model
 
-// sampleTableを作成する
+// userBasicsTableにInsertする
 func CreateUserBasics(userBasics UserBasics) (UserBasics, error) {
 	err := db.Create(&userBasics).Error
 	if err != nil {

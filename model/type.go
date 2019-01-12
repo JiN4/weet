@@ -21,7 +21,7 @@ type Sample struct {
 type UserBasics struct {
 	gorm.Model
 	UserName string `gorm:"not null"`
-	Image1   string
+	Image1   string `gorm:"not null"`
 	Image2   string
 	Image3   string
 	Age      uint `gorm:"not null"`
@@ -35,43 +35,24 @@ type UserQuestionAndAnswer struct {
 	UserID     uint `gorm:"not null"`
 	QuestionID uint `gorm:"not null"`
 	AnswerID   uint
-	Question   Question `gorm:"foreignkey:QuestionID"`
-	Answer     Answer   `gorm:"foreignkey:AnswerID"`
 }
 
 //マイページの質問
 type Question struct {
-	ID   uint   `gorm:"primary_key"`
-	Name string `gorm:"not null"`
+	gorm.Model
+	Name     string `gorm:"not null"`
+	FormatID uint   `gorm:"not null"`
 }
 
 //マイページの質問の答えの選択肢
 type Answer struct {
-	ID         uint   `gorm:"primary_key"`
-	QuestionID uint   `gorm:"not null"`
+	gorm.Model
 	Name       string `gorm:"not null"`
+	QuestionID uint   `gorm:"not null"`
 }
 
 //マッチング形式
-type Format struct {
-	ID   uint   `gorm:"primary_key"`
+type MatchingFormat struct {
+	gorm.Model
 	Name string `gorm:"not null"`
-}
-
-type Question2 struct {
-	ID       uint   `gorm:"primary_key"`
-	Name     string `gorm:"not null"`
-	AnswerID uint
-	Answer   []Answer `gorm:"foreignkey:AnswerID"`
-}
-
-type Test1 struct {
-	gorm.Model
-	Tests2 []Test2 `gorm:"foreignkey:UserRefer"`
-}
-
-type Test2 struct {
-	gorm.Model
-	Number    string
-	UserRefer uint
 }

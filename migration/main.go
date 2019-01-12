@@ -16,17 +16,13 @@ func main() {
 	db.DropTableIfExists(&model.UserQuestionAndAnswer{})
 	db.DropTableIfExists(&model.Question{})
 	db.DropTableIfExists(&model.Answer{})
-	db.DropTableIfExists(&model.Format{})
-	db.DropTableIfExists(&model.Question2{})
+	db.DropTableIfExists(&model.MatchingFormat{})
 
 	db.CreateTable(&model.Sample{})
-	db.CreateTable(&model.Question{})
-	db.CreateTable(&model.Answer{})
-	db.CreateTable(&model.Format{})
+	db.CreateTable(&model.Sample{})
 	db.CreateTable(&model.UserBasics{})
 	db.CreateTable(&model.UserQuestionAndAnswer{})
-	db.CreateTable(&model.Question2{})
-	db.CreateTable(&model.Test1{})
-	db.CreateTable(&model.Test2{})
-
+	db.CreateTable(&model.Question{})
+	db.CreateTable(&model.Answer{})
+	db.CreateTable(&model.MatchingFormat{})
 }

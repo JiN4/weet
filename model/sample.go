@@ -2,7 +2,7 @@ package model
 
 import "github.com/weet/service"
 
-// sampleTableを作成する
+// sampleTableにInsertする
 func CreateSample(sample Sample) (Sample, error) {
 	err := db.Create(&sample).Error
 	if err != nil {
