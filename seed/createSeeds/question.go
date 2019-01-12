@@ -7,7 +7,7 @@ import (
 	"github.com/weet/model"
 )
 
-func CreateSeedQuestion() {
+func CreateSeedQuestions() {
 
 	question_infos := []map[string]string{
 		map[string]string{

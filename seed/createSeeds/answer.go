@@ -7,7 +7,7 @@ import (
 	"github.com/weet/model"
 )
 
-func CreateSeedAnswer() {
+func CreateSeedAnswers() {
 
 	answers_infos := []map[string]string{
 		map[string]string{
@@ -26,7 +26,7 @@ func CreateSeedAnswer() {
 			"QuestionID": "1",
 			"Name":       "AB型",
 		},
-		map[string]string{
+		map[string]string{ //5
 			"QuestionID": "2",
 			"Name":       "インドア派",
 		},
@@ -46,7 +46,7 @@ func CreateSeedAnswer() {
 			"QuestionID": "3",
 			"Name":       "4~6日に1回",
 		},
-		map[string]string{
+		map[string]string{ //10
 			"QuestionID": "3",
 			"Name":       "1週間に1回",
 		},
@@ -66,7 +66,7 @@ func CreateSeedAnswer() {
 			"QuestionID": "4",
 			"Name":       "欲しくない",
 		},
-		map[string]string{
+		map[string]string{ //15
 			"QuestionID": "4",
 			"Name":       "どちらでもいい",
 		},
