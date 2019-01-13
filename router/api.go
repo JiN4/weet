@@ -12,7 +12,7 @@ func apiRouter(api *gin.RouterGroup) {
 
 	//---マイページ画面---
 	//ユーザページ情報を全て取得
-	//api.GET("/user/:user_id", controller.GetUserFilteredById)
+	api.GET("/user/:user_id", controller.GetUserFilteredById)
 
 	/*
 		//基本情報の取得

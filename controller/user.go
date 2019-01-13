@@ -4,6 +4,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func GetMypageFilteredById(c *gin.Context) {
+func GetUserFilteredById(c *gin.Context) {
 
 }
