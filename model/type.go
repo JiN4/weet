@@ -32,16 +32,20 @@ type UserBasics struct {
 //ユーザごとの質疑応答
 type UserQuestionAndAnswer struct {
 	gorm.Model
-	UserID     uint `gorm:"not null"`
-	QuestionID uint `gorm:"not null"`
-	AnswerID   uint
+	MatchingFormatID uint `gorm:"not null"`
+	UserID           uint `gorm:"not null"`
+	QuestionID       uint `gorm:"not null"`
+	AnswerID         uint
+	Question         Question
+	Answer           Answer
 }
 
 //マイページの質問
 type Question struct {
 	gorm.Model
-	Name     string `gorm:"not null"`
-	FormatID uint   `gorm:"not null"`
+	Name             string `gorm:"not null"`
+	MatchingFormatID uint   `gorm:"not null"`
+	Answer           []Answer
 }
 
 //マイページの質問の答えの選択肢

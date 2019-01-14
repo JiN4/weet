@@ -11,8 +11,8 @@ func apiRouter(api *gin.RouterGroup) {
 	api.GET("/sample/:sample_id", controller.GetSampleById)
 
 	//---マイページ画面---
-	//ユーザページ情報を全て取得
-	api.GET("/user/:user_id", controller.GetUserFilteredById)
+	//ID別にユーザページ情報を取得
+	api.GET("/user/:user_id", controller.GetUserById)
 
 	/*
 		//基本情報の取得

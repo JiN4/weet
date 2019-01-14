@@ -11,40 +11,47 @@ func CreateSeedUserQuestionAndAnswers() {
 
 	questionAndAnswer_infos := []map[string]string{
 		map[string]string{
-			"UserID":     "1",
-			"QuestionID": "1",
-			"AnswerID":   "1",
+			"MatchingFormatID": "1",
+			"UserID":           "1",
+			"QuestionID":       "1",
+			"AnswerID":         "1",
 		},
 		map[string]string{
-			"UserID":     "1",
-			"QuestionID": "2",
-			"AnswerID":   "5",
+			"MatchingFormatID": "1",
+			"UserID":           "1",
+			"QuestionID":       "2",
+			"AnswerID":         "5",
 		},
 		map[string]string{
-			"UserID":     "1",
-			"QuestionID": "3",
-			"AnswerID":   "3",
+			"MatchingFormatID": "2",
+			"UserID":           "1",
+			"QuestionID":       "3",
+			"AnswerID":         "8",
 		},
 		map[string]string{
-			"UserID":     "1",
-			"QuestionID": "4",
-			"AnswerID":   "13",
+			"MatchingFormatID": "3",
+			"UserID":           "1",
+			"QuestionID":       "4",
+			"AnswerID":         "13",
 		},
 		map[string]string{
-			"UserID":     "1",
-			"QuestionID": "5",
-			"AnswerID":   "17",
+			"MatchingFormatID": "4",
+			"UserID":           "1",
+			"QuestionID":       "5",
+			"AnswerID":         "17",
 		},
 	}
 
 	for _, info := range questionAndAnswer_infos {
+		matchingFormatID, _ := strconv.Atoi(info["MatchingFormatID"])
 		userID, _ := strconv.Atoi(info["UserID"])
 		questionID, _ := strconv.Atoi(info["QuestionID"])
 		answerID, _ := strconv.Atoi(info["AnswerID"])
 		createUserQuestionAndAnswer(model.UserQuestionAndAnswer{
-			UserID:     uint(userID),
-			QuestionID: uint(questionID),
-			AnswerID:   uint(answerID),
+			MatchingFormatID: uint(matchingFormatID),
+			UserID:           uint(userID),
+			QuestionID:       uint(questionID),
+			AnswerID:         uint(answerID),
 		})
 	}
 }

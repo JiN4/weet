@@ -1,0 +1,41 @@
+package model
+
+import (
+	"github.com/weet/service"
+)
+
+func GetUserSpecialsById(userId uint) service.UserSpecials {
+	userSpecial := service.UserSpecial{}
+	userSpecials := service.UserSpecials{}
+
+	for i := 2; i < 5; i++ {
+
+		//userSpecial.MatchingFormatName = GetMatchingFormatNameByID(uint(i))
+
+		switch i {
+		case 2:
+			userSpecial.MatchingFormatName = "恋愛"
+		case 3:
+			userSpecial.MatchingFormatName = "婚活"
+		case 4:
+			userSpecial.MatchingFormatName = "ルームメイト"
+		}
+		userSpecial.UserQuestionsAndAnswers = GetUserQuestionAndAnswerByFormatID(userId, uint(i))
+		userSpecials = append(userSpecials, userSpecial)
+	}
+	return userSpecials
+}
+
+/*
+//マッチング形式ごとのタイトルと質疑応答
+type UserSpecial struct {
+	[
+		MatchingFormatName
+		[
+			QuestionID   uint   `json:"question_id"`
+			QuestionName string `json:"question_name"`
+			AnswerName   string `json:"answer_name"`
+		]
+	]
+}
+*/
