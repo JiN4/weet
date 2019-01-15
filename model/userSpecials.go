@@ -8,7 +8,7 @@ func GetUserSpecialsById(userId uint) service.UserSpecials {
 	userSpecial := service.UserSpecial{}
 	userSpecials := service.UserSpecials{}
 
-	for i := 2; i < 5; i++ {
+	for i := 1; i < 5; i++ {
 
 		//userSpecial.MatchingFormatName = GetMatchingFormatNameByID(uint(i))
 
