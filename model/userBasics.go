@@ -14,7 +14,7 @@ func CreateUserBasics(userBasics UserBasics) (UserBasics, error) {
 func GetUserBasicsById(userId uint) (service.UserBasics, error) {
 	userBasics := service.UserBasics{}
 	err := db.Where("id = ?", userId).First(&userBasics).Error
-	userBasics.MatchingFormatName = "基本情報／友達"
+	userBasics.MatchingFormatName = "基本情報"
 	return userBasics, err
 }
 

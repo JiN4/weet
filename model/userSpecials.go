@@ -13,6 +13,8 @@ func GetUserSpecialsById(userId uint) service.UserSpecials {
 		//userSpecial.MatchingFormatName = GetMatchingFormatNameByID(uint(i))
 
 		switch i {
+		case 1:
+			userSpecial.MatchingFormatName = "友達"
 		case 2:
 			userSpecial.MatchingFormatName = "恋愛"
 		case 3:
