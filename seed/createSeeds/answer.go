@@ -67,10 +67,6 @@ func CreateSeedAnswers() {
 			"Name":       "欲しくない",
 		},
 		map[string]string{ //15
-			"QuestionID": "4",
-			"Name":       "どちらでもいい",
-		},
-		map[string]string{
 			"QuestionID": "5",
 			"Name":       "生活費の節約",
 		},

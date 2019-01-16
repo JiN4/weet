@@ -16,7 +16,7 @@ func CreateSeedQuestions() {
 		},
 		map[string]string{
 			"MatchingFormatID": "1",
-			"Name":             "インドア派？アウトドア派？",
+			"Name":             "休日の過ごし方",
 		},
 		map[string]string{
 			"MatchingFormatID": "2",
@@ -24,11 +24,11 @@ func CreateSeedQuestions() {
 		},
 		map[string]string{
 			"MatchingFormatID": "3",
-			"Name":             "子供は欲しい？",
+			"Name":             "子供の願望",
 		},
 		map[string]string{
 			"MatchingFormatID": "4",
-			"Name":             "ルームシェアの目的は？",
+			"Name":             "ルームシェアの目的",
 		},
 	}
 
