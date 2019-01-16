@@ -22,7 +22,7 @@ func GetUserSpecialsById(userId uint) service.UserSpecials {
 		case 4:
 			userSpecial.MatchingFormatName = "ルームメイト"
 		}
-		userSpecial.UserQuestionsAndAnswers = GetUserQuestionAndAnswerByFormatID(userId, uint(i))
+		userSpecial.UserQuestionsAndAnswers = GetUserQuestionAndAnswerByUserIDAndFormatID(userId, uint(i))
 		userSpecials = append(userSpecials, userSpecial)
 	}
 	return userSpecials

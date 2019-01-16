@@ -7,6 +7,7 @@ func GetUserById(userId uint) (service.User, error) {
 	var err error
 	user.UserBasics, err = GetUserBasicsById(userId)
 	user.UserSpecials = GetUserSpecialsById(userId)
+	user.UserIdealSpecials = GetUserIdealSpecialsById(userId)
 	return user, err
 }
 
