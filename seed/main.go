@@ -9,4 +9,5 @@ func main() {
 	createSeeds.CreateSeedAnswers()
 	createSeeds.CreateSeedMatchingFormats()
 	createSeeds.CreateSeedUserQuestionAndAnswers()
+	createSeeds.CreateSeedUserIdealQuestionAndAnswers()
 }
