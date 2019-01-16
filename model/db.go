@@ -23,5 +23,7 @@ func GetDBConn() *gorm.DB {
 }
 
 func GetDBConfig() (string, string) {
-	return "mysql", "root:kobedenshi@tcp(gs-group-weet-mysql.cnvtlozgscam.ap-northeast-1.rds.amazonaws.com:3306)/gs_group_weet?charset=utf8&parseTime=True&loc=Local"
+	//return "mysql", "root:kobedenshi@tcp(gs-group-weet-mysql.cnvtlozgscam.ap-northeast-1.rds.amazonaws.com:3306)/gs_group_weet?charset=utf8&parseTime=True&loc=Local"
+	return "mysql", "root:Ss153122!@/weet?charset=utf8&parseTime=True&loc=Local"
+
 }
