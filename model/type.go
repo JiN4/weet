@@ -24,7 +24,8 @@ type UserBasics struct {
 	Image1   string `gorm:"not null"`
 	Image2   string
 	Image3   string
-	Age      uint `gorm:"not null"`
+	Age      uint   `gorm:"not null"`
+	Sex      string `gorm:"not null"`
 	Hitokoto string
 	Comment  string
 }
