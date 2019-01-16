@@ -26,8 +26,19 @@ func CreateSeedUserBasics() {
 			"Image2":   "",
 			"Image3":   "",
 			"Age":      "22",
+			"Gender":   "男性",
 			"Hitokoto": "ガールフレンドを作りたいです！",
 			"Comment":  "お酒を飲める人とバーや居酒屋に行きたいです。\n身長180cm以上でアクティブでポジティブなボーイッシュな人募集します！（周りからは理想高すぎっ！？と言われますが書いてみました。）",
+		},
+		map[string]string{
+			"UserName": "橋本環奈",
+			"Image1":   "https://pbs.twimg.com/media/DBl9HtdVoAAzt1A.jpg",
+			"Image2":   "",
+			"Image3":   "",
+			"Age":      "20",
+			"Gender":   "女性",
+			"Hitokoto": "我、橋本環奈ぞ？",
+			"Comment":  "1000年に一度の逸材です！",
 		},
 	}
 
@@ -39,6 +50,7 @@ func CreateSeedUserBasics() {
 			Image2:   info["Image2"],
 			Image3:   info["Image3"],
 			Age:      uint(age),
+			Gender:   info["Gender"],
 			Hitokoto: info["Hitokoto"],
 			Comment:  info["Comment"],
 		})

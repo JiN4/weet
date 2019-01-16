@@ -40,6 +40,36 @@ func CreateSeedUserQuestionAndAnswers() {
 			"QuestionID":       "5",
 			"AnswerID":         "17",
 		},
+		map[string]string{
+			"MatchingFormatID": "1",
+			"UserID":           "2",
+			"QuestionID":       "1",
+			"AnswerID":         "4",
+		},
+		map[string]string{
+			"MatchingFormatID": "1",
+			"UserID":           "2",
+			"QuestionID":       "2",
+			"AnswerID":         "6",
+		},
+		map[string]string{
+			"MatchingFormatID": "2",
+			"UserID":           "2",
+			"QuestionID":       "3",
+			"AnswerID":         "11",
+		},
+		map[string]string{
+			"MatchingFormatID": "3",
+			"UserID":           "2",
+			"QuestionID":       "4",
+			"AnswerID":         "13",
+		},
+		map[string]string{
+			"MatchingFormatID": "4",
+			"UserID":           "2",
+			"QuestionID":       "5",
+			"AnswerID":         "17",
+		},
 	}
 
 	for _, info := range questionAndAnswer_infos {
