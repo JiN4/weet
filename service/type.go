@@ -8,8 +8,9 @@ type Sample struct {
 
 // ユーザ情報-----！
 type User struct {
-	UserBasics   UserBasics   `json:"User_basics"`
-	UserSpecials UserSpecials `json:"User_pecials"`
+	UserBasics        UserBasics        `json:"user_basics"`
+	UserSpecials      UserSpecials      `json:"user_specials"`
+	UserIdealSpecials UserIdealSpecials `json:"user_ideal_specials"`
 }
 
 //基本的な情報
@@ -41,6 +42,22 @@ type UserQuestionAndAnswer struct {
 }
 
 type UserQuestionsAndAnswers []UserQuestionAndAnswer
+
+//マッチング形式ごとのタイトルと質疑応答
+type UserIdealSpecial struct {
+	MatchingFormatName           string                       `json:"matching_format_name"`
+	UserIdealQuestionsAndAnswers UserIdealQuestionsAndAnswers `json:"user_ideal_questions_and_answers"`
+}
+
+type UserIdealSpecials []UserIdealSpecial
+
+type UserIdealQuestionAndAnswer struct {
+	QuestionID   uint   `json:"ideal_question_id"`
+	QuestionName string `json:"ideal_question_name"`
+	AnswerName   string `json:"ideal_answer_name"`
+}
+
+type UserIdealQuestionsAndAnswers []UserIdealQuestionAndAnswer
 
 //一つの質問に対する答えの候補-----！
 type Answers struct {
