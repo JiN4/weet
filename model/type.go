@@ -40,6 +40,17 @@ type UserQuestionAndAnswer struct {
 	Answer           Answer
 }
 
+//ユーザごとの質疑応答(理想像)
+type UserIdealQuestionAndAnswer struct {
+	gorm.Model
+	MatchingFormatID uint `gorm:"not null"`
+	UserID           uint `gorm:"not null"`
+	QuestionID       uint `gorm:"not null"`
+	AnswerID         uint
+	Question         Question
+	Answer           Answer
+}
+
 //マイページの質問
 type Question struct {
 	gorm.Model
