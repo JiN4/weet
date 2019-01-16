@@ -20,6 +20,7 @@ type UserBasics struct {
 	Image1             string `json:"image1"`
 	Image2             string `json:"image2"`
 	Image3             string `json:"image3"`
+	Sex                string `json:"sex"`
 	Age                string `json:"age"`
 	Hitokoto           string `json:"hitokoto"`
 	Comment            string `json:"comment"`
