@@ -4,9 +4,10 @@ import (
 	"github.com/weet/service"
 )
 
-func GetUserSpecialsById(userId uint) service.UserSpecials {
+func GetUserSpecialsById(userId uint) (service.UserSpecials, error) {
 	userSpecial := service.UserSpecial{}
 	userSpecials := service.UserSpecials{}
+	var err error
 
 	for i := 1; i < 5; i++ {
 
@@ -22,10 +23,10 @@ func GetUserSpecialsById(userId uint) service.UserSpecials {
 		case 4:
 			userSpecial.MatchingFormatName = "ルームメイト"
 		}
-		userSpecial.UserQuestionsAndAnswers = GetUserQuestionAndAnswerByUserIDAndFormatID(userId, uint(i))
+		userSpecial.UserQuestionsAndAnswers, err = GetUserQuestionAndAnswerByUserIDAndFormatID(userId, uint(i))
 		userSpecials = append(userSpecials, userSpecial)
 	}
-	return userSpecials
+	return userSpecials, err
 }
 
 /*

@@ -14,12 +14,12 @@ func CreateUserIdealQuestionAndAnswer(userIdealQuestionAndAnswer UserIdealQuesti
 }
 
 //user_idとFormat_Idで条件を絞り、理想像の質問と答えが１セットの配列が欲しい(N+1問題の解決のためにクエリを手打ち)
-func GetUserIdealQuestionAndAnswerByUserIDAndFormatID(userId uint, matchingFormatId uint) service.UserIdealQuestionsAndAnswers {
+func GetUserIdealQuestionAndAnswerByUserIDAndFormatID(userId uint, matchingFormatId uint) (service.UserIdealQuestionsAndAnswers, error) {
 	userIdealQuestionsAndAnswers := service.UserIdealQuestionsAndAnswers{}
 	userIdealQAndA := service.UserIdealQuestionsAndAnswers{}
 	count := 0
 
-	db.Raw("select questions.id AS question_id, questions.name AS question_name , answers.name AS answer_name from user_ideal_question_and_answers join user_basics on (user_ideal_question_and_answers.user_id = user_basics.id) left join questions on (user_ideal_question_and_answers.question_id = questions.id) left join answers on (user_ideal_question_and_answers.answer_id = answers.id) where user_ideal_question_and_answers.user_id = ? and user_ideal_question_and_answers.matching_format_id = ?", userId, matchingFormatId).Scan(&userIdealQuestionsAndAnswers)
+	err := db.Raw("select questions.id AS question_id, questions.name AS question_name , answers.name AS answer_name from user_ideal_question_and_answers join user_basics on (user_ideal_question_and_answers.user_id = user_basics.id) left join questions on (user_ideal_question_and_answers.question_id = questions.id) left join answers on (user_ideal_question_and_answers.answer_id = answers.id) where user_ideal_question_and_answers.user_id = ? and user_ideal_question_and_answers.matching_format_id = ?", userId, matchingFormatId).Scan(&userIdealQuestionsAndAnswers).Error
 
 	//ABB
 	userIdealQAndA = append(userIdealQAndA, userIdealQuestionsAndAnswers[0])
@@ -35,7 +35,7 @@ func GetUserIdealQuestionAndAnswerByUserIDAndFormatID(userId uint, matchingForma
 		}
 
 	}
-	return userIdealQAndA
+	return userIdealQAndA, err
 }
 
 /*
