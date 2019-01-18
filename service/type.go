@@ -22,6 +22,7 @@ type UserBasics struct {
 	Image3             string `json:"image3"`
 	Sex                string `json:"sex"`
 	Age                string `json:"age"`
+	Residence          string `json:"residence"`
 	Hitokoto           string `json:"hitokoto"`
 	Comment            string `json:"comment"`
 }
@@ -60,15 +61,58 @@ type UserIdealQuestionAndAnswer struct {
 
 type UserIdealQuestionsAndAnswers []UserIdealQuestionAndAnswer
 
-//一つの質問に対する答えの候補-----！
-type Answers struct {
-	QuestionID uint         `json:"question_id"`
-	Answers    AnswersCards `json:"answers"`
+type AnswersByQuestion struct {
+	QuestionID       uint             `json:"question_id"`
+	CandidateAnswers CandidateAnswers `json:"candidate_answer"`
 }
 
-type AnswersCard struct {
+//一つの質問に対する答えの候補-----！
+type Answers []AnswersByQuestion
+
+type CandidateAnswer struct {
 	AmswerID   uint   `json:"answer_id"`
 	AnswerName string `json:"answer_name"`
 }
 
-type AnswersCards []AnswersCard
+type CandidateAnswers []CandidateAnswer
+
+type MatchingUser struct {
+	UserName  string `json:"user_name"`
+	Image1    string `json:"image1"`
+	Image2    string `json:"image2"`
+	Image3    string `json:"image3"`
+	Age       string `json:"age"`
+	Residence string `json:"residence"`
+	Hitokoto  string `json:"hitokoto"`
+}
+
+// {
+// 	"answers": [
+// 		{
+// 			"question_id": "1",
+// 			"candidate_answers": [
+// 				{
+// 					"answer_id": "1",
+// 					"answer_name": "たこ焼き",
+// 				},
+// 				{
+// 					"answer_id": "2",
+// 					"answer_name": "お好み焼き",
+// 				},
+// 			]
+// 		},
+// 		{
+// 			"question_id": "2",
+// 			"candidate_answers": [
+// 				{
+// 					"answer_id": "1",
+// 					"answer_name": "緑茶",
+// 				},
+// 				{
+// 					"answer_id": "2",
+// 					"answer_name": "麦茶",
+// 				},
+// 			]
+// 		}
+// 	]
+// }
