@@ -14,6 +14,12 @@ func apiRouter(api *gin.RouterGroup) {
 	//ID別にユーザページ情報を取得
 	api.GET("/user/:user_id", controller.GetUserById)
 
+	api.GET("/answers", controller.GetAnswers)
+
+	//マッチング相手
+	//性別、居住地（複数）、マッチ項目数
+	api.GET("/matching/player/:user_id/matching-format/:matching_format_id", controller.GetMatchingUser)
+
 	/*
 		//基本情報の取得
 		api.GET("/mypage/basic/:user_id", controller.GetBasicMypageFilteredById)
