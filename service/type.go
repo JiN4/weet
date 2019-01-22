@@ -21,7 +21,7 @@ type UserBasics struct {
 	Image2             string `json:"image2"`
 	Image3             string `json:"image3"`
 	Sex                string `json:"sex"`
-	Age                string `json:"age"`
+	Age                uint   `json:"age"`
 	Residence          string `json:"residence"`
 	Hitokoto           string `json:"hitokoto"`
 	Comment            string `json:"comment"`
@@ -62,19 +62,17 @@ type UserIdealQuestionAndAnswer struct {
 type UserIdealQuestionsAndAnswers []UserIdealQuestionAndAnswer
 
 type AnswersByQuestion struct {
-	QuestionID       uint             `json:"question_id"`
-	CandidateAnswers CandidateAnswers `json:"candidate_answer"`
+	QuestionID       uint              `json:"question_id"`
+	CandidateAnswers []CandidateAnswer `json:"candidate_answer"`
 }
 
 //一つの質問に対する答えの候補-----！
 type Answers []AnswersByQuestion
 
 type CandidateAnswer struct {
-	AmswerID   uint   `json:"answer_id"`
+	AnswerID   uint   `json:"answer_id"`
 	AnswerName string `json:"answer_name"`
 }
-
-type CandidateAnswers []CandidateAnswer
 
 type MatchingUser struct {
 	UserName  string `json:"user_name"`
