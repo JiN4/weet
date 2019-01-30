@@ -33,6 +33,16 @@ func GetUserById(c *gin.Context) {
 	c.JSON(http.StatusOK, user)
 }
 
+func UpdateUserBasics(c *gin.Context){
+	userId, err := GetUint(c, "user_id")
+	err = model.UpdateUserBasics(c,userId)
+	if err != nil {
+		log.Println(err)
+	}
+}
+
+
+
 /*
 //マッチング形式ごとのタイトルと質疑応答
 type UserSpecial struct {

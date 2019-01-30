@@ -14,6 +14,8 @@ func apiRouter(api *gin.RouterGroup) {
 	//ID別にユーザページ情報を取得
 	api.GET("/user/:user_id", controller.GetUserById)
 
+	api.POST("/user/:user_id/update/basics", controller.UpdateUserBasics)
+
 	//全ての回答を取得
 	api.GET("/answers", controller.GetAnswers)
 
