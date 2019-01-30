@@ -60,7 +60,7 @@ func CreateSeedQuestions() {
 		},
 		map[string]string{
 			"MatchingFormatID": "1",
-			"Name":             "一ヶ月の娯楽費（交際・外食・服飾等）",
+			"Name":             "一ヶ月の娯楽費",
 		},
 		map[string]string{
 			"MatchingFormatID": "1",

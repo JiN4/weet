@@ -51,7 +51,7 @@ func CreateSeedMatchingAges() {
 		userID, _ := strconv.Atoi(info["UserID"])
 		firstAge, _ := strconv.Atoi(info["FirstAge"])
 		lastAge, _ := strconv.Atoi(info["LastAge"])
-		createMatchingAgo(model.MatchingAge{
+		createMatchingAge(model.MatchingAge{
 			UserID:   uint(userID),
 			FirstAge: uint(firstAge),
 			LastAge:  uint(lastAge),
@@ -59,7 +59,7 @@ func CreateSeedMatchingAges() {
 	}
 }
 
-func createMatchingAgo(matchingAge model.MatchingAge) {
+func createMatchingAge(matchingAge model.MatchingAge) {
 	matchingAge, err := model.CreateMatchingAge(matchingAge)
 	if err != nil {
 		panic(err)
