@@ -21,11 +21,9 @@ func GetUserIdealQuestionAndAnswerByUserIDAndFormatID(userId uint, matchingForma
 
 	err := db.Raw("select questions.id AS question_id, questions.name AS question_name , answers.name AS answer_name from user_ideal_question_and_answers join user_basics on (user_ideal_question_and_answers.user_id = user_basics.id) left join questions on (user_ideal_question_and_answers.question_id = questions.id) left join answers on (user_ideal_question_and_answers.answer_id = answers.id) where user_ideal_question_and_answers.user_id = ? and user_ideal_question_and_answers.matching_format_id = ?", userId, matchingFormatId).Scan(&userIdealQuestionsAndAnswers).Error
 
-	//ABB
 	userIdealQAndA = append(userIdealQAndA, userIdealQuestionsAndAnswers[0])
 
 	for i := 0; i < len(userIdealQuestionsAndAnswers)-1; i++ {
-		// if 1 ==
 
 		if userIdealQuestionsAndAnswers[i].QuestionID == userIdealQuestionsAndAnswers[i+1].QuestionID {
 			userIdealQAndA[count].AnswerName = userIdealQAndA[count].AnswerName + "," + userIdealQuestionsAndAnswers[i+1].AnswerName
