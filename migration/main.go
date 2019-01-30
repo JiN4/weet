@@ -18,6 +18,12 @@ func main() {
 	db.DropTableIfExists(&model.Answer{})
 	db.DropTableIfExists(&model.MatchingFormat{})
 	db.DropTableIfExists(&model.UserIdealQuestionAndAnswer{})
+	db.DropTableIfExists(&model.UserSex{})
+	db.DropTableIfExists(&model.Prefectures{})
+	db.DropTableIfExists(&model.MatchingPrefectures{})
+	db.DropTableIfExists(&model.MatchingSex{})
+	db.DropTableIfExists(&model.MatchingAge{})
+	db.DropTableIfExists(&model.MatchingFormatChoice{})
 
 	db.CreateTable(&model.Sample{})
 	db.CreateTable(&model.UserBasics{})
@@ -26,4 +32,10 @@ func main() {
 	db.CreateTable(&model.Answer{})
 	db.CreateTable(&model.MatchingFormat{})
 	db.CreateTable(&model.UserIdealQuestionAndAnswer{})
+	db.CreateTable(&model.UserSex{})
+	db.CreateTable(&model.Prefectures{})
+	db.CreateTable(&model.MatchingPrefectures{})
+	db.CreateTable(&model.MatchingSex{})
+	db.CreateTable(&model.MatchingAge{})
+	db.CreateTable(&model.MatchingFormatChoice{})
 }

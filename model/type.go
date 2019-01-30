@@ -20,14 +20,15 @@ type Sample struct {
 //基本的なユーザ情報
 type UserBasics struct {
 	gorm.Model
-	UserName string `gorm:"not null"`
-	Image1   string `gorm:"not null"`
-	Image2   string
-	Image3   string
-	Age      uint   `gorm:"not null"`
-	Sex      string `gorm:"not null"`
-	Hitokoto string
-	Comment  string
+	UserName    string `gorm:"not null"`
+	Image1      string `gorm:"not null"`
+	Image2      string
+	Image3      string
+	Age         uint   `gorm:"not null"`
+	Sex         string `gorm:"not null"`
+	ResidenceID uint
+	Hitokoto    string
+	Comment     string
 }
 
 //ユーザごとの質疑応答
@@ -71,4 +72,57 @@ type Answer struct {
 type MatchingFormat struct {
 	gorm.Model
 	Name string `gorm:"not null"`
+}
+
+//性別
+type UserSex struct {
+	UserID uint `sql:"type:int" gorm:"primary_key"`
+	SexID  uint
+}
+
+//都道府県
+type Prefectures struct {
+	ID   uint `gorm:"primary_key"`
+	Name string
+}
+
+//マッチングしたい都道府県
+type MatchingPrefectures struct {
+	gorm.Model
+	UserID        uint
+	PrefecturesID string
+}
+
+//マッチングしたい性別
+type MatchingSex struct {
+	UserID uint `sql:"type:int" gorm:"primary_key"`
+	SexID  uint //男性：１ 女性：２ どちらも：３
+}
+
+//マッチングしたい年齢
+type MatchingAge struct {
+	UserID   uint `sql:"type:int" gorm:"primary_key"`
+	FirstAge uint
+	LastAge  uint
+}
+
+//マッチングしたい年齢
+type MatchingFormatChoice struct {
+	UserID   uint `sql:"type:int" gorm:"primary_key"`
+	Love     uint
+	Marriage uint
+	Roommate uint
+}
+
+//プレイヤーといいねしたユーザ
+type MavoUser struct {
+	gorm.Model
+	PlayerUserID uint
+	FavoUserID   uint
+}
+
+type MatchingUser struct {
+	gorm.Model
+	UserID1 uint
+	UserID2 uint
 }

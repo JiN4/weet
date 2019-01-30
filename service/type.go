@@ -13,6 +13,14 @@ type User struct {
 	UserIdealSpecials UserIdealSpecials `json:"user_ideal_specials"`
 }
 
+type MatchingUser struct {
+	UserBasics             UserBasics        `json:"user_basics"`
+	UserSpecials           UserSpecials      `json:"user_specials"`
+	UserIdealSpecials      UserIdealSpecials `json:"user_ideal_specials"`
+	MatchingQuestions      []uint            `json:"matching_questions"`
+	MatchingIdealQuestions []uint            `json:"matching_ideal_questions"`
+}
+
 //基本的な情報
 type UserBasics struct {
 	MatchingFormatName string `json:"matching_format_name"`
@@ -73,44 +81,3 @@ type CandidateAnswer struct {
 	AnswerID   uint   `json:"answer_id"`
 	AnswerName string `json:"answer_name"`
 }
-
-type MatchingUser struct {
-	UserName  string `json:"user_name"`
-	Image1    string `json:"image1"`
-	Image2    string `json:"image2"`
-	Image3    string `json:"image3"`
-	Age       string `json:"age"`
-	Residence string `json:"residence"`
-	Hitokoto  string `json:"hitokoto"`
-}
-
-// {
-// 	"answers": [
-// 		{
-// 			"question_id": "1",
-// 			"candidate_answers": [
-// 				{
-// 					"answer_id": "1",
-// 					"answer_name": "たこ焼き",
-// 				},
-// 				{
-// 					"answer_id": "2",
-// 					"answer_name": "お好み焼き",
-// 				},
-// 			]
-// 		},
-// 		{
-// 			"question_id": "2",
-// 			"candidate_answers": [
-// 				{
-// 					"answer_id": "1",
-// 					"answer_name": "緑茶",
-// 				},
-// 				{
-// 					"answer_id": "2",
-// 					"answer_name": "麦茶",
-// 				},
-// 			]
-// 		}
-// 	]
-// }

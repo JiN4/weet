@@ -10,4 +10,10 @@ func main() {
 	createSeeds.CreateSeedMatchingFormats()
 	createSeeds.CreateSeedUserQuestionAndAnswers()
 	createSeeds.CreateSeedUserIdealQuestionAndAnswers()
+	createSeeds.CreateSeedUserSexes()
+	createSeeds.CreateSeedMatchingAges()
+	createSeeds.CreateSeedMatchingPrefectures()
+	createSeeds.CreateSeedMatchingSexes()
+	createSeeds.CreateSeedPrefectures()
+	createSeeds.CreateSeedMatchingFormatChoices()
 }
