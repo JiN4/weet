@@ -122,8 +122,8 @@ type FavoUser struct {
 	FavoUserID       uint
 }
 
-//マッチングしたユーザ
-type MatchingUser struct {
+//お互いにいいねしたユーザ
+type MutualFavoUser struct {
 	gorm.Model
 	MatchingFormatID uint
 	UserID1          uint
