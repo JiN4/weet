@@ -11,6 +11,11 @@ func CreateSeedMatchingAges() {
 
 	matchingAges_infos := []map[string]string{
 		map[string]string{
+			"UserID"	: "1",
+			"FistAge"	: "23",
+			"LastAge"	: "27",
+		},
+		map[string]string{
 			"UserID":   "2",
 			"FirstAge": "23",
 			"LastAge":  "30",
