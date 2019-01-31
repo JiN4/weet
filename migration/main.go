@@ -11,7 +11,6 @@ func main() {
 
 	// migrate
 
-	db.DropTableIfExists(&model.Sample{})
 	db.DropTableIfExists(&model.UserBasics{})
 	db.DropTableIfExists(&model.UserQuestionAndAnswer{})
 	db.DropTableIfExists(&model.Question{})
@@ -28,7 +27,6 @@ func main() {
 	db.DropTableIfExists(&model.MutualFavoUser{})
 	db.DropTableIfExists(&model.MessageUser{})
 
-	db.CreateTable(&model.Sample{})
 	db.CreateTable(&model.UserBasics{})
 	db.CreateTable(&model.UserQuestionAndAnswer{})
 	db.CreateTable(&model.Question{})
