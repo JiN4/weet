@@ -2094,7 +2094,7 @@ http://54.238.92.95:8080/api/v1/matching/player/{user_id}/matching-format/{match
 
 ---
 
-### プレイヤーとメッセージ可能なユーザを全て取得する[GET]
+### プレイヤーにいいね！を送ってきたユーザを全て取得する[GET]
 
 #### Example URI
 ```
