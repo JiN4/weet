@@ -1,11 +1,5 @@
 package service
 
-// sampleデータ
-type Sample struct {
-	Name    string `json:"name"`
-	Comment string `json:"comment"`
-}
-
 // ユーザ情報-----！
 type User struct {
 	UserBasics        UserBasics        `json:"user_basics"`

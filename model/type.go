@@ -10,13 +10,6 @@ import (
 //    UpdatedAt time.Time
 //}
 
-// Sample情報
-type Sample struct {
-	gorm.Model
-	Name    string `gorm:"not null"`
-	Comment string `gorm:"not null"`
-}
-
 //基本的なユーザ情報
 type UserBasics struct {
 	gorm.Model
