@@ -29,6 +29,11 @@ func apiRouter(api *gin.RouterGroup) {
 	//プレイヤーをお気に入りにしているユーザを取得
 	api.GET("/mutual-favo/user/:user_id", controller.GetMutualFavoUsersById)
 
+	//
+	api.POST("/matching-sex/:user_id", controller.PostUserSexes)
+
+	//マッチングフォーマット判別
+	api.POST("/matching")
 	/*
 		//基本情報の取得
 		api.GET("/mypage/basic/:user_id", controller.GetBasicMypageFilteredById)

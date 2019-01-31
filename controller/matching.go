@@ -130,3 +130,11 @@ func GetMatchingUser(c *gin.Context) {
 
 	c.JSON(http.StatusOK, matchingUser)
 }
+
+func PostUserSexes(c *gin.Context){
+	userId, err := GetUint(c, "user_id")
+	err = model.PostUserSexes(c, userId)
+	if err != nil {
+		log.Println(err)
+	}
+}
