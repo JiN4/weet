@@ -14,6 +14,7 @@ func apiRouter(api *gin.RouterGroup) {
 	//ID別にユーザページ情報を取得
 	api.GET("/user/:user_id", controller.GetUserById)
 
+	//基本情報を更新
 	api.POST("/user/:user_id/update/basics", controller.UpdateUserBasics)
 
 	//全ての回答を取得
@@ -29,11 +30,14 @@ func apiRouter(api *gin.RouterGroup) {
 	//プレイヤーをお気に入りにしているユーザを取得
 	api.GET("/mutual-favo/user/:user_id", controller.GetMutualFavoUsersById)
 
-	//
-	api.POST("/matching-sex/:user_id", controller.PostUserSexes)
+	//求める性別を指定する
+	api.POST("/matching-sexes/:user_id", controller.PostUserSexes)
+
+	//求める相手の年齢を指定
+	api.POST("/matching-ages/:user_id", controller.PostMatcingAges)
 
 	//マッチングフォーマット判別
-	api.POST("/matching")
+	api.POST("/matching-format-choices/:user_id", controller.PostMatchingFormatChoices)
 	/*
 		//基本情報の取得
 		api.GET("/mypage/basic/:user_id", controller.GetBasicMypageFilteredById)
