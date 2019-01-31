@@ -1,8 +1,6 @@
 package model
 
 import (
-	"fmt"
-
 	"github.com/weet/service"
 )
 
@@ -31,8 +29,6 @@ func GetFavoUsersById(userId uint) service.AllFavoUsers {
 	for _, favoUser := range favoUsers {
 		userBasics.ID = 0
 		db.Where("id = ?", favoUser.FavoUserID).First(&userBasics)
-		fmt.Println(favoUser.FavoUserID)
-		fmt.Println(userBasics)
 
 		prefectures = GetPrefecturesNameById(userBasics.ResidenceID)
 
@@ -42,8 +38,6 @@ func GetFavoUsersById(userId uint) service.AllFavoUsers {
 		serviceFavoUser.Age = userBasics.Age
 		serviceFavoUser.Residence = prefectures
 		serviceFavoUser.Hitokoto = userBasics.Hitokoto
-
-		fmt.Println(serviceFavoUser)
 
 		if favoUser.MatchingFormatID == 1 {
 			friendFavoUsers = append(friendFavoUsers, serviceFavoUser)
