@@ -32,6 +32,7 @@ func GetFavoUsersById(userId uint) service.AllFavoUsers {
 
 		prefectures = GetPrefecturesNameById(userBasics.ResidenceID)
 
+		serviceFavoUser.UserID = favoUser.FavoUserID
 		serviceFavoUser.UserName = userBasics.UserName
 		serviceFavoUser.Image1 = userBasics.Image1
 		serviceFavoUser.Sex = userBasics.Sex
