@@ -32,6 +32,9 @@ func apiRouter(api *gin.RouterGroup) {
 	//求める性別を指定する
 	api.POST("/matching-sexes/:user_id", controller.PostUserSexes)
 
+	//求める相手の年齢を指定
+	api.POST("/matching-ages/:user_id", controller.PostMatcingAges)
+
 	//マッチングフォーマット判別
 	api.POST("/matching-format-choices/:user_id", controller.PostMatchingFormatChoices)
 	/*

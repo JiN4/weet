@@ -146,3 +146,11 @@ func PostMatchingFormatChoices(c *gin.Context){
 		log.Println(err)
 	}
 }
+
+func PostMatcingAges(c *gin.Context){
+	userId, err := GetUint(c, "user_id")
+	err = model.PostMatcingAges(c, userId)
+	if err != nil {
+		log.Println(err)
+	}
+}
