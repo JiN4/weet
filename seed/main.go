@@ -16,4 +16,6 @@ func main() {
 	createSeeds.CreateSeedMatchingSexes()
 	createSeeds.CreateSeedPrefectures()
 	createSeeds.CreateSeedMatchingFormatChoices()
+	createSeeds.CreateSeedFavoUsers()
+	createSeeds.CreateSeedMutualFavoUsers()
 }

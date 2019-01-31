@@ -33,30 +33,10 @@ func GetUserById(c *gin.Context) {
 	c.JSON(http.StatusOK, user)
 }
 
-func UpdateUserBasics(c *gin.Context){
+func UpdateUserBasics(c *gin.Context) {
 	userId, err := GetUint(c, "user_id")
-	err = model.UpdateUserBasics(c,userId)
+	err = model.UpdateUserBasics(c, userId)
 	if err != nil {
 		log.Println(err)
 	}
 }
-
-
-
-/*
-//マッチング形式ごとのタイトルと質疑応答
-type UserSpecial struct {
-	MatchingFormatName      string                  `json:"matching_format_name"`
-	UserQuestionsAndAnswers UserQuestionsAndAnswers `json:"user_questions_and_answers"`
-}
-
-type UserSpecials []UserSpecial
-
-//１セットの質疑応答
-//select user_basics.user_name, questions.name, answers.name from user_question_and_answers join user_basics on (user_question_and_answers.user_id = user_basics.id) left join questions on (user_question_and_answers.question_id = questions.id) left join answers on (user_question_and_answers.answer_id = answers.id);
-type UserQuestionAndAnswer struct {
-	QuestionID   uint   `json:"question_id"`
-	QuestionName string `json:"question_name"`
-	AnswerName   string `json:"answer_name"`
-}
-*/
