@@ -664,7 +664,7 @@ func CreateSeedAnswers() {
 		},
 		map[string]string{
 			"QuestionID": "18",
-			"Name":       "4〜6回に一回",
+			"Name":       "4〜6日に一回",
 		},
 		map[string]string{ //165
 			"QuestionID": "18",

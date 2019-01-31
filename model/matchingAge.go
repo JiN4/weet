@@ -19,3 +19,7 @@ func GetMatchingAgeByUserID(userId uint) (uint, uint, error) {
 
 	return firstAge, lastAge, err
 }
+
+//func PostMatcingAge(userId uint) error{
+//
+//}
