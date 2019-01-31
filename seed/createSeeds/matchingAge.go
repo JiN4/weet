@@ -11,9 +11,9 @@ func CreateSeedMatchingAges() {
 
 	matchingAges_infos := []map[string]string{
 		map[string]string{
-			"UserID"	: "1",
-			"FistAge"	: "23",
-			"LastAge"	: "27",
+			"UserID":   "1",
+			"FirstAge": "20",
+			"LastAge":  "40",
 		},
 		map[string]string{
 			"UserID":   "2",
@@ -32,6 +32,11 @@ func CreateSeedMatchingAges() {
 		},
 		map[string]string{
 			"UserID":   "5",
+			"FirstAge": "20",
+			"LastAge":  "35",
+		},
+		map[string]string{
+			"UserID":   "6",
 			"FirstAge": "20",
 			"LastAge":  "35",
 		},
