@@ -33,15 +33,25 @@ func GetUserById(c *gin.Context) {
 	c.JSON(http.StatusOK, user)
 }
 
-func UpdateUserBasics(c *gin.Context){
+func UpdateUserBasics(c *gin.Context) {
 	userId, err := GetUint(c, "user_id")
-	err = model.UpdateUserBasics(c,userId)
+	err = model.UpdateUserBasics(c, userId)
 	if err != nil {
 		log.Println(err)
 	}
 }
 
+func GetFavoUsersById(c *gin.Context) {
+	allFavoUsers := service.AllFavoUsers{}
 
+	userId, err := GetUint(c, "user_id")
+	allFavoUsers = model.GetFavoUsersById(userId)
+	if err != nil {
+		log.Println(err)
+	}
+
+	c.JSON(http.StatusOK, allFavoUsers)
+}
 
 /*
 //マッチング形式ごとのタイトルと質疑応答

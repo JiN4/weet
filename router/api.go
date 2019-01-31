@@ -23,6 +23,9 @@ func apiRouter(api *gin.RouterGroup) {
 	//性別、居住地（複数）、マッチ項目数
 	api.GET("/matching/player/:user_id/matching-format/:matching_format_id", controller.GetMatchingUser)
 
+	//プレイヤーをお気に入りにしているユーザを取得
+	api.GET("/favo/user/:user_id", controller.GetFavoUsersById)
+
 	/*
 		//基本情報の取得
 		api.GET("/mypage/basic/:user_id", controller.GetBasicMypageFilteredById)
