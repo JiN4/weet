@@ -633,44 +633,23 @@ func CreateSeedUserIdealQuestionAndAnswers() {
 		},
 
 		map[string]string{
-			"MatchingFormatID": "1",
+			"MatchingFormatID": "4",
 			"UserID":           "3",
 			"QuestionID":       "30",
 			"AnswerID":         "214",
 		},
 		map[string]string{
-			"MatchingFormatID": "1",
+			"MatchingFormatID": "4",
 			"UserID":           "3",
 			"QuestionID":       "30",
 			"AnswerID":         "215",
 		},
 		map[string]string{
-			"MatchingFormatID": "1",
+			"MatchingFormatID": "4",
 			"UserID":           "3",
 			"QuestionID":       "30",
 			"AnswerID":         "216",
 		},
-
-		map[string]string{
-			"MatchingFormatID": "1",
-			"UserID":           "3",
-			"QuestionID":       "30",
-			"AnswerID":         "217",
-		},
-
-		map[string]string{
-			"MatchingFormatID": "1",
-			"UserID":           "3",
-			"QuestionID":       "30",
-			"AnswerID":         "218",
-		},
-		map[string]string{
-			"MatchingFormatID": "1",
-			"UserID":           "3",
-			"QuestionID":       "30",
-			"AnswerID":         "219",
-		},
-
 		map[string]string{
 			"MatchingFormatID": "4",
 			"UserID":           "3",
