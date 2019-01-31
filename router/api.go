@@ -29,11 +29,11 @@ func apiRouter(api *gin.RouterGroup) {
 	//プレイヤーをお気に入りにしているユーザを取得
 	api.GET("/mutual-favo/user/:user_id", controller.GetMutualFavoUsersById)
 
-	//
-	api.POST("/matching-sex/:user_id", controller.PostUserSexes)
+	//求める性別を指定する
+	api.POST("/matching-sexes/:user_id", controller.PostUserSexes)
 
 	//マッチングフォーマット判別
-	api.POST("/matching")
+	api.POST("/matching-format-choices/:user_id", controller.PostMatchingFormatChoices)
 	/*
 		//基本情報の取得
 		api.GET("/mypage/basic/:user_id", controller.GetBasicMypageFilteredById)

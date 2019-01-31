@@ -138,3 +138,11 @@ func PostUserSexes(c *gin.Context){
 		log.Println(err)
 	}
 }
+
+func PostMatchingFormatChoices(c *gin.Context){
+	userId, err := GetUint(c, "user_id")
+	err = model.PostMatchingFormatChoices(c, userId)
+	if err != nil {
+		log.Println(err)
+	}
+}
