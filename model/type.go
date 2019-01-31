@@ -114,15 +114,26 @@ type MatchingFormatChoice struct {
 	Roommate uint
 }
 
-//プレイヤーといいねしたユーザ
-type MavoUser struct {
+//プレイヤーにいいねしたユーザ
+type FavoUser struct {
 	gorm.Model
-	PlayerUserID uint
-	FavoUserID   uint
+	MatchingFormatID uint
+	PlayerUserID     uint
+	FavoUserID       uint
 }
 
+//マッチングしたユーザ
 type MatchingUser struct {
 	gorm.Model
-	UserID1 uint
-	UserID2 uint
+	MatchingFormatID uint
+	UserID1          uint
+	UserID2          uint
+}
+
+//メッセージしてるユーザ
+type MessageUser struct {
+	gorm.Model
+	MatchingFormatID uint
+	UserID1          uint
+	UserID2          uint
 }

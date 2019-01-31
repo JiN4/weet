@@ -81,3 +81,27 @@ type CandidateAnswer struct {
 	AnswerID   uint   `json:"answer_id"`
 	AnswerName string `json:"answer_name"`
 }
+
+type FavoUser struct {
+	UserName  string `json:"user_name"`
+	Image1    string `json:"image1"`
+	Sex       string `json:"sex"`
+	Age       uint   `json:"age"`
+	Residence string `json:"residence"`
+	Hitokoto  string `json:"hitokoto"`
+}
+
+type FriendFavoUsers []FavoUser
+
+type LoveFavoUsers []FavoUser
+
+type MarriageFavoUsers []FavoUser
+
+type RoommateFavoUsers []FavoUser
+
+type AllFavoUsers struct {
+	FriendFavoUsers   FriendFavoUsers   `json:"friend_favo_users"`
+	LoveFavoUsers     LoveFavoUsers     `json:"love_favo_users"`
+	MarriageFavoUsers MarriageFavoUsers `json:"marriage_favo_users"`
+	RoommateFavoUsers RoommateFavoUsers `json:"roommate_favo_users"`
+}
