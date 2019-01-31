@@ -32,6 +32,7 @@ func GetMutualFavoUsersById(userId uint) service.AllFavoUsers {
 
 		prefectures = GetPrefecturesNameById(userBasics.ResidenceID)
 
+		serviceFavoUser.UserID = mutualFavoUser.UserID2
 		serviceFavoUser.UserName = userBasics.UserName
 		serviceFavoUser.Image1 = userBasics.Image1
 		serviceFavoUser.Sex = userBasics.Sex
@@ -58,6 +59,7 @@ func GetMutualFavoUsersById(userId uint) service.AllFavoUsers {
 
 		prefectures = GetPrefecturesNameById(userBasics.ResidenceID)
 
+		serviceFavoUser.UserID = mutualFavoUser.UserID1
 		serviceFavoUser.UserName = userBasics.UserName
 		serviceFavoUser.Image1 = userBasics.Image1
 		serviceFavoUser.Sex = userBasics.Sex

@@ -83,6 +83,7 @@ type CandidateAnswer struct {
 }
 
 type FavoUser struct {
+	UserID    uint   `json:"user_id"`
 	UserName  string `json:"user_name"`
 	Image1    string `json:"image1"`
 	Sex       string `json:"sex"`
