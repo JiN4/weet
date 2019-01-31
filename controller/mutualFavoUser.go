@@ -1,6 +1,8 @@
 package controller
 
 import (
+	"encoding/json"
+	"io/ioutil"
 	"log"
 	"net/http"
 
@@ -19,4 +21,21 @@ func GetMutualFavoUsersById(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, allFavoUsers)
+}
+
+func PostMutualFavoUsers(c *gin.Context) {
+	body, err := ioutil.ReadAll(c.Request.Body)
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.Println(string(body))
+
+	var mutualFavoUser model.MutualFavoUser
+	err = json.Unmarshal(body, &mutualFavoUser)
+
+	mutualFavoUser, err = model.CreateMutualFavoUser(mutualFavoUser)
+	if err != nil {
+		panic(err)
+	}
+
 }

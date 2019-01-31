@@ -131,25 +131,33 @@ func GetMatchingUser(c *gin.Context) {
 	c.JSON(http.StatusOK, matchingUser)
 }
 
-func PostUserSexes(c *gin.Context){
+func PutMatchingPrefectures(c *gin.Context) {
 	userId, err := GetUint(c, "user_id")
-	err = model.PostUserSexes(c, userId)
+	err = model.PutMatchingPrefectures(c, userId)
 	if err != nil {
 		log.Println(err)
 	}
 }
 
-func PostMatchingFormatChoices(c *gin.Context){
+func PutMatchingSexes(c *gin.Context) {
 	userId, err := GetUint(c, "user_id")
-	err = model.PostMatchingFormatChoices(c, userId)
+	err = model.PutMatchingSexes(c, userId)
 	if err != nil {
 		log.Println(err)
 	}
 }
 
-func PostMatcingAges(c *gin.Context){
+func PutMatchingFormatChoices(c *gin.Context) {
 	userId, err := GetUint(c, "user_id")
-	err = model.PostMatcingAges(c, userId)
+	err = model.PutMatchingFormatChoices(c, userId)
+	if err != nil {
+		log.Println(err)
+	}
+}
+
+func PutMatcingAges(c *gin.Context) {
+	userId, err := GetUint(c, "user_id")
+	err = model.PutMatcingAges(c, userId)
 	if err != nil {
 		log.Println(err)
 	}

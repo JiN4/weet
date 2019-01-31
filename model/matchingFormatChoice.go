@@ -2,9 +2,10 @@ package model
 
 import (
 	"encoding/json"
-	"github.com/gin-gonic/gin"
 	"io/ioutil"
 	"log"
+
+	"github.com/gin-gonic/gin"
 )
 
 // sampleTableにInsertする
@@ -16,7 +17,7 @@ func CreateMatchingFormatChoice(matchingFormatChoice MatchingFormatChoice) (Matc
 	return matchingFormatChoice, nil
 }
 
-func PostMatchingFormatChoices(c *gin.Context, userId uint) error {
+func PutMatchingFormatChoices(c *gin.Context, userId uint) error {
 	body, err := ioutil.ReadAll(c.Request.Body)
 	if err != nil {
 		log.Fatal(err)

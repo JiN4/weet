@@ -106,7 +106,7 @@ type MatchingAge struct {
 	LastAge  uint
 }
 
-//マッチングしたい年齢
+//マッチングされたいマッチング形式
 type MatchingFormatChoice struct {
 	UserID   uint `sql:"type:int" gorm:"primary_key"`
 	Love     uint

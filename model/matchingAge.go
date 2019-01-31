@@ -2,9 +2,10 @@ package model
 
 import (
 	"encoding/json"
-	"github.com/gin-gonic/gin"
 	"io/ioutil"
 	"log"
+
+	"github.com/gin-gonic/gin"
 )
 
 // TableにInsertする
@@ -27,7 +28,7 @@ func GetMatchingAgeByUserID(userId uint) (uint, uint, error) {
 	return firstAge, lastAge, err
 }
 
-func PostMatcingAges(c *gin.Context, userId uint) error {
+func PutMatcingAges(c *gin.Context, userId uint) error {
 	body, err := ioutil.ReadAll(c.Request.Body)
 	if err != nil {
 		log.Fatal(err)
