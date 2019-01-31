@@ -10,10 +10,10 @@ import (
 func CreateSeedUserSexes() {
 
 	userSex_infos := []map[string]string{
-		// map[string]string{
-		// 	"UserID": "1",
-		// 	"SexID":  "1",
-		// },
+		map[string]string{
+			"UserID": "1",
+			"SexID":  "1",
+		},
 		map[string]string{
 			"UserID": "2",
 			"SexID":  "1",
