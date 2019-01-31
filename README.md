@@ -1,6 +1,5 @@
-WEET Back-end
+WEET Back-end
 ====
-神戸電子専門学校3年学年末 グループ制作
 
 ## Description
 マッチングアプリ-WEETのAPIサーバー
@@ -16,9 +15,9 @@ WEET Back-end
 
 ### ユーザ情報を全て取得する[GET]
 
-#### Call
+#### Example URI
 ```
-54.238.92.95:8080/api/v1/user/{user_id}
+http://54.238.92.95:8080**/api/v1/user/{user_id}**
 ```
 
 |Parameter|Value|type|
@@ -439,9 +438,9 @@ WEET Back-end
 
 ### ユーザページの質疑応答の答えを全て取得する[GET]
 
-#### Call
+#### Example URI
 ```
-54.238.92.95:8080/api/v1/answers
+http://54.238.92.95:8080/api/v1/answers
 ```
 
 #### Response
@@ -1877,9 +1876,9 @@ WEET Back-end
 
 ### プレイヤーとマッチングしたユーザを取得する[GET]
 
-#### Call
+#### Example URI
 ```
-54.238.92.95:8080/api/v1/matching/player/{user_id}/matching-format/{matching_format_id}
+http://54.238.92.95:8080/api/v1/matching/player/{user_id}/matching-format/{matching_format_id}
 ```
 
 |Parameter|Value|type|
@@ -2097,7 +2096,7 @@ WEET Back-end
 
 ### プレイヤーとメッセージ可能なユーザを全て取得する[GET]
 
-#### Call
+#### Example URI
 ```
 http://54.238.92.95:8080/api/v1/favo/user/{user_id}
 ```
@@ -2148,7 +2147,7 @@ http://54.238.92.95:8080/api/v1/favo/user/{user_id}
 
 ### プレイヤーとメッセージ可能なユーザを全て取得する[GET]
 
-#### Call
+#### Example URI
 ```
 http://54.238.92.95:8080/api/v1/mutual-favo/user/{user_id}
 ```
