@@ -11,6 +11,10 @@ func CreateSeedMatchingPrefectures() {
 
 	matchingPrefectures_infos := []map[string]string{
 		map[string]string{
+			"UserID":        "1",
+			"PrefecturesID": "26,27,28",
+		},
+		map[string]string{
 			"UserID":        "2",
 			"PrefecturesID": "26,27,28",
 		},
@@ -24,6 +28,10 @@ func CreateSeedMatchingPrefectures() {
 		},
 		map[string]string{
 			"UserID":        "5",
+			"PrefecturesID": "26,27,28",
+		},
+		map[string]string{
+			"UserID":        "6",
 			"PrefecturesID": "26,27,28",
 		},
 		map[string]string{

@@ -11,6 +11,12 @@ func CreateSeedMatchingFormatChoices() {
 
 	matchingFormatChoices_infos := []map[string]string{
 		map[string]string{
+			"UserID":    "1",
+			"Love":      "1",
+			"Marriage":  "1",
+			"Roommate ": "1",
+		},
+		map[string]string{
 			"UserID":    "2",
 			"Love":      "1",
 			"Marriage":  "1",
@@ -30,6 +36,12 @@ func CreateSeedMatchingFormatChoices() {
 		},
 		map[string]string{
 			"UserID":    "5",
+			"Love":      "1",
+			"Marriage":  "1",
+			"Roommate ": "1",
+		},
+		map[string]string{
+			"UserID":    "6",
 			"Love":      "1",
 			"Marriage":  "1",
 			"Roommate ": "1",

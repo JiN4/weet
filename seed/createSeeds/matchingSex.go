@@ -11,6 +11,10 @@ func CreateSeedMatchingSexes() {
 
 	matchingSexes_infos := []map[string]string{
 		map[string]string{
+			"UserID": "1",
+			"SexID":  "2",
+		},
+		map[string]string{
 			"UserID": "2",
 			"SexID":  "2",
 		},
