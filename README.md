@@ -17,7 +17,7 @@ WEET Back-end
 
 #### Example URI
 ```
-http://54.238.92.95:8080**/api/v1/user/{user_id}**
+http://54.238.92.95:8080/api/v1/user/{user_id}
 ```
 
 |Parameter|Value|type|
