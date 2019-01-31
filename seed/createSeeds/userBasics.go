@@ -22,7 +22,7 @@ func CreateSeedUserBasics() {
 	userBasics_infos := []map[string]string{
 		map[string]string{
 			"UserName":    "かまやん",
-			"Image1":      "https://ezumin.com/wp-content/uploads/2017/12/13395110_1166833013368528_105320497_n.jpg",
+			"Image1":      "https://instagram.fkix1-1.fna.fbcdn.net/vp/ad9b127c15ce9deed680a905cce0ab6c/5CDFE7E7/t51.2885-19/s150x150/46253158_2289712387706244_6080621643191812096_n.jpg?_nc_ht=instagram.fkix1-1.fna.fbcdn.net",
 			"Image2":      "",
 			"Image3":      "",
 			"Age":         "22",
