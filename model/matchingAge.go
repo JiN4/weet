@@ -37,10 +37,12 @@ func PostMatcingAges(c *gin.Context, userId uint) error {
 	var matchingAge MatchingAge
 	err = json.Unmarshal(body, &matchingAge)
 
-	err = db.Model(&matchingAge).Where("user_id = ?", userId).Updates(MatchingAge{
-		FirstAge:	matchingAge.FirstAge,
-		LastAge:	matchingAge.LastAge,
-	}).Error
+	if 20 <= matchingAge.FirstAge && matchingAge.FirstAge <= matchingAge.LastAge {
+		err = db.Model(&matchingAge).Where("user_id = ?", userId).Updates(MatchingAge{
+			FirstAge: matchingAge.FirstAge,
+			LastAge:  matchingAge.LastAge,
+		}).Error
+	}
 
 	return err
 }
