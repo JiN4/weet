@@ -10,6 +10,210 @@ import (
 func CreateSeedUserQuestionAndAnswers() {
 	questionAndAnswer_infos := []map[string]string{
 		map[string]string{
+			"MatchingFormatID": "1",//　質問ドキュメント参照
+			"UserID":           "1",//　ユーザ情報ドキュメント参照
+			"QuestionID":       "1",//　質問ドキュメント参照
+			"AnswerID":         "28",//　回答ドキュメント参照
+		},
+		map[string]string{
+			"MatchingFormatID": "1",
+			"UserID":           "1",
+			"QuestionID":       "2",
+			"AnswerID":         "48",
+		},
+		map[string]string{
+			"MatchingFormatID": "1",
+			"UserID":           "1",
+			"QuestionID":       "3",
+			"AnswerID":         "53",
+		},
+		map[string]string{
+			"MatchingFormatID": "1",
+			"UserID":           "1",
+			"QuestionID":       "4",
+			"AnswerID":         "61",
+		},
+		map[string]string{
+			"MatchingFormatID": "1",
+			"UserID":           "1",
+			"QuestionID":       "5",
+			"AnswerID":         "68",
+		},
+		map[string]string{
+			"MatchingFormatID": "1",
+			"UserID":           "1",
+			"QuestionID":       "6",
+			"AnswerID":         "71",
+		},
+		map[string]string{
+			"MatchingFormatID": "1",
+			"UserID":           "1",
+			"QuestionID":       "7",
+			"AnswerID":         "115",
+		},
+		map[string]string{
+			"MatchingFormatID": "1",
+			"UserID":           "1",
+			"QuestionID":       "8",
+			"AnswerID":         "124",
+		},
+		map[string]string{
+			"MatchingFormatID": "1",
+			"UserID":           "1",
+			"QuestionID":       "9",
+			"AnswerID":         "131",
+		},
+		map[string]string{
+			"MatchingFormatID": "1",
+			"UserID":           "1",
+			"QuestionID":       "10",
+			"AnswerID":         "136",
+		},
+		map[string]string{
+			"MatchingFormatID": "1",
+			"UserID":           "1",
+			"QuestionID":       "11",
+			"AnswerID":         "139",
+		},
+		map[string]string{
+			"MatchingFormatID": "1",
+			"UserID":           "1",
+			"QuestionID":       "12",
+			"AnswerID":         "143",
+		},
+		map[string]string{
+			"MatchingFormatID": "1",
+			"UserID":           "1",
+			"QuestionID":       "13",
+			"AnswerID":         "146",
+		},
+		map[string]string{
+			"MatchingFormatID": "1",
+			"UserID":           "1",
+			"QuestionID":       "14",
+			"AnswerID":         "152",
+		},
+		map[string]string{
+			"MatchingFormatID": "1",
+			"UserID":           "1",
+			"QuestionID":       "15",
+			"AnswerID":         "155",
+		},
+		map[string]string{
+			"MatchingFormatID": "2",
+			"UserID":           "1",
+			"QuestionID":       "16",
+			"AnswerID":         "157",
+		},
+		map[string]string{
+			"MatchingFormatID": "2",
+			"UserID":           "1",
+			"QuestionID":       "17",
+			"AnswerID":         "160",
+		},
+		map[string]string{
+			"MatchingFormatID": "2",
+			"UserID":           "1",
+			"QuestionID":       "18",
+			"AnswerID":         "165",
+		},
+		map[string]string{
+			"MatchingFormatID": "2",
+			"UserID":           "1",
+			"QuestionID":       "19",
+			"AnswerID":         "169",
+		},
+		map[string]string{
+			"MatchingFormatID": "2",
+			"UserID":           "1",
+			"QuestionID":       "20",
+			"AnswerID":         "175",
+		},
+		map[string]string{
+			"MatchingFormatID": "3",
+			"UserID":           "1",
+			"QuestionID":       "21",
+			"AnswerID":         "177",
+		},
+		map[string]string{
+			"MatchingFormatID": "3",
+			"UserID":           "1",
+			"QuestionID":       "22",
+			"AnswerID":         "179",
+		},
+		map[string]string{
+			"MatchingFormatID": "3",
+			"UserID":           "1",
+			"QuestionID":       "23",
+			"AnswerID":         "182",
+		},
+		map[string]string{
+			"MatchingFormatID": "3",
+			"UserID":           "1",
+			"QuestionID":       "24",
+			"AnswerID":         "187",
+		},
+		map[string]string{
+			"MatchingFormatID": "3",
+			"UserID":           "1",
+			"QuestionID":       "25",
+			"AnswerID":         "197",
+		},
+		map[string]string{
+			"MatchingFormatID": "3",
+			"UserID":           "1",
+			"QuestionID":       "26",
+			"AnswerID":         "200",
+		},
+		map[string]string{
+			"MatchingFormatID": "3",
+			"UserID":           "1",
+			"QuestionID":       "27",
+			"AnswerID":         "203",
+		},
+		map[string]string{
+			"MatchingFormatID": "3",
+			"UserID":           "1",
+			"QuestionID":       "28",
+			"AnswerID":         "208",
+		},
+		map[string]string{
+			"MatchingFormatID": "3",
+			"UserID":           "1",
+			"QuestionID":       "29",
+			"AnswerID":         "212",
+		},
+		map[string]string{
+			"MatchingFormatID": "4",
+			"UserID":           "1",
+			"QuestionID":       "30",
+			"AnswerID":         "214",
+		},
+		map[string]string{
+			"MatchingFormatID": "4",
+			"UserID":           "1",
+			"QuestionID":       "31",
+			"AnswerID":         "221",
+		},
+		map[string]string{
+			"MatchingFormatID": "4",
+			"UserID":           "1",
+			"QuestionID":       "32",
+			"AnswerID":         "226",
+		},
+		map[string]string{
+			"MatchingFormatID": "4",
+			"UserID":           "1",
+			"QuestionID":       "33",
+			"AnswerID":         "231",
+		},
+		map[string]string{
+			"MatchingFormatID": "4",
+			"UserID":           "1",
+			"QuestionID":       "34",
+			"AnswerID":         "233",
+		},
+		map[string]string{
 			"MatchingFormatID": "1",
 			"UserID":           "2",
 			"QuestionID":       "1",
