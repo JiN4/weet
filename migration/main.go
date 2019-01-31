@@ -25,7 +25,7 @@ func main() {
 	db.DropTableIfExists(&model.MatchingAge{})
 	db.DropTableIfExists(&model.MatchingFormatChoice{})
 	db.DropTableIfExists(&model.FavoUser{})
-	db.DropTableIfExists(&model.MatchingUser{})
+	db.DropTableIfExists(&model.MutualFavoUser{})
 	db.DropTableIfExists(&model.MessageUser{})
 
 	db.CreateTable(&model.Sample{})
@@ -42,6 +42,6 @@ func main() {
 	db.CreateTable(&model.MatchingAge{})
 	db.CreateTable(&model.MatchingFormatChoice{})
 	db.CreateTable(&model.FavoUser{})
-	db.CreateTable(&model.MatchingUser{})
+	db.CreateTable(&model.MutualFavoUser{})
 	db.CreateTable(&model.MessageUser{})
 }
