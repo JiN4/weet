@@ -2,9 +2,12 @@ package model
 
 import (
 	"encoding/json"
-	"github.com/gin-gonic/gin"
+	"fmt"
 	"io/ioutil"
 	"log"
+	"strconv"
+
+	"github.com/gin-gonic/gin"
 )
 
 // TableにInsertする
@@ -25,16 +28,20 @@ func GetMatchingSexByUserID(userId uint) (uint, error) {
 	return sexId, err
 }
 
-func PostUserSexes(c *gin.Context, userId uint) error {
+func PutMatchingSexes(c *gin.Context, userId uint) error {
 	body, err := ioutil.ReadAll(c.Request.Body)
 	if err != nil {
 		log.Fatal(err)
 	}
 	log.Println(string(body))
 
-	var userSex UserSex
-	err = json.Unmarshal(body, &userSex)
+	var matchingSex MatchingSex
+	err = json.Unmarshal(body, &matchingSex)
 
-	err = db.Model(&userSex).Where("user_id = ?", userId).Update("SexID", userSex.SexID).Error
+	fmt.Println(matchingSex)
+
+	i := strconv.Itoa(int(matchingSex.SexID))
+
+	err = db.Model(&matchingSex).Where("user_id = ?", userId).Update("sex_id", i).Error
 	return err
 }
