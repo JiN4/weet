@@ -53,6 +53,7 @@ func GetUserBasicsById(userId uint) (service.UserBasics, error) {
 	prefectures := GetPrefecturesNameById(userBasics.ResidenceID)
 
 	serviceUserBasics.MatchingFormatName = "基本情報"
+	serviceUserBasics.UserID = userId
 	serviceUserBasics.UserName = userBasics.UserName
 	serviceUserBasics.Image1 = userBasics.Image1
 	serviceUserBasics.Image2 = userBasics.Image2

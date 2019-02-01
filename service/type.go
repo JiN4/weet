@@ -18,6 +18,7 @@ type MatchingUser struct {
 //基本的な情報
 type UserBasics struct {
 	MatchingFormatName string `json:"matching_format_name"`
+	UserID             uint   `json:"user_id"`
 	UserName           string `json:"user_name"`
 	Image1             string `json:"image1"`
 	Image2             string `json:"image2"`
