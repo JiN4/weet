@@ -18,6 +18,7 @@ type MatchingUser struct {
 //基本的な情報
 type UserBasics struct {
 	MatchingFormatName string `json:"matching_format_name"`
+	UserID             uint   `json:"user_id"`
 	UserName           string `json:"user_name"`
 	Image1             string `json:"image1"`
 	Image2             string `json:"image2"`
@@ -100,3 +101,27 @@ type AllFavoUsers struct {
 	MarriageFavoUsers MarriageFavoUsers `json:"marriage_favo_users"`
 	RoommateFavoUsers RoommateFavoUsers `json:"roommate_favo_users"`
 }
+
+//-------
+// ユーザ情報-----！
+type User2 struct {
+	UserBasics         UserBasics         `json:"user_basics"`
+	UserSpecials       UserSpecials       `json:"user_specials"`
+	UserIdealSpecials2 UserIdealSpecials2 `json:"user_ideal_specials"`
+}
+
+//マッチング形式ごとのタイトルと質疑応答
+type UserIdealSpecial2 struct {
+	MatchingFormatName            string                        `json:"matching_format_name"`
+	UserIdealQuestionsAndAnswers2 UserIdealQuestionsAndAnswers2 `json:"user_ideal_questions_and_answers"`
+}
+
+type UserIdealSpecials2 []UserIdealSpecial2
+
+type UserIdealQuestionsAndAnswer2 struct {
+	QuestionID   uint     `json:"ideal_question_id"`
+	QuestionName string   `json:"ideal_question_name"`
+	AnswerName   []string `json:"ideal_answer_name"`
+}
+
+type UserIdealQuestionsAndAnswers2 []UserIdealQuestionsAndAnswer2
