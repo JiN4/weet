@@ -2,7 +2,9 @@ package model
 
 import (
 	"fmt"
+	"strconv"
 
+	"github.com/gin-gonic/gin"
 	"github.com/weet/service"
 )
 
@@ -120,16 +122,13 @@ func ComparisonUserSpecial(userId uint, candidateMatchingUserId uint, matchingFo
 	return matchingQuestions, matchingIdealQuestions, err
 }
 
-/*
-//マッチング形式ごとのタイトルと質疑応答
-type UserSpecial struct {
-	[
-		MatchingFormatName
-		[
-			QuestionID   uint   `json:"question_id"`
-			QuestionName string `json:"question_name"`
-			AnswerName   string `json:"answer_name"`
-		]
-	]
+func UpdateUserSpecials(c *gin.Context, userId uint) {
+	userQuestionAndAnswer := UserQuestionAndAnswer{}
+	answerId := c.PostForm("answer_id")
+	questionId := c.PostForm("question_id")
+
+	answerID, _ := strconv.Atoi(answerId)
+
+	db.Model(&userQuestionAndAnswer).Where("user_id = ? and question_id = ?", userId, questionId).Update("answer_id", answerID)
+
 }
-*/

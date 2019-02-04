@@ -64,3 +64,11 @@ func UpdateUserBasics(c *gin.Context) {
 		log.Println(err)
 	}
 }
+
+func UpdateUserSpecials(c *gin.Context) {
+	userId, err := GetUint(c, "user_id")
+	model.UpdateUserSpecials(c, userId)
+	if err != nil {
+		log.Println(err)
+	}
+}
