@@ -49,4 +49,9 @@ func apiRouter(api1 *gin.RouterGroup, api2 *gin.RouterGroup) {
 
 	//マッチングされる形式を更新する
 	api1.PUT("/matching-format-choices/:user_id", controller.PutMatchingFormatChoices)
+
+	//プレイヤーをお気に入りにしているユーザを削除
+	api1.DELETE("/favo/player/:player_user_id/favo-user/:favo_user_id/matching-format/:matching_format_id", controller.DeleteFavoUsers)
+	//curl http://localhost:8080/api/v1/favo/player/1/favo-user/9/matching-format/1 -X DELETE -H "Content-Type: application/json"
+
 }
