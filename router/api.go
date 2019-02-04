@@ -36,6 +36,10 @@ func apiRouter(api1 *gin.RouterGroup, api2 *gin.RouterGroup) {
 	//ユーザの基本情報を更新する
 	api1.PUT("/user/:user_id/update/basics", controller.UpdateUserBasics)
 
+	//ユーザの基本情報を更新する
+	api1.PUT("/user/:user_id/update/specials", controller.UpdateUserSpecials)
+	//curl -w '\n' 'http://localhost:8080/api/v1/user/1/update/specials' --data 'message=1' -XPUT
+
 	//求める居住地を更新する
 	api1.PUT("/matching-prefectures/:user_id", controller.PutMatchingPrefectures)
 	//curl http://localhost:8080/api/v1/matching-prefectures/1 -X PUT -H "Content-Type: application/json" -d '{"PrefecturesID": "1"}'
@@ -52,6 +56,5 @@ func apiRouter(api1 *gin.RouterGroup, api2 *gin.RouterGroup) {
 
 	//プレイヤーをお気に入りにしているユーザを削除
 	api1.DELETE("/favo/player/:player_user_id/favo-user/:favo_user_id/matching-format/:matching_format_id", controller.DeleteFavoUsers)
-	//curl http://localhost:8080/api/v1/favo/player/1/favo-user/9/matching-format/1 -X DELETE -H "Content-Type: application/json"
-
+	//curl http://http://54.238.92.95:8080/api/v1/favo/player/1/favo-user/7/matching-format/2 -X DELETE -H "Content-Type: application/json"
 }
