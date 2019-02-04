@@ -38,3 +38,23 @@ func PostFavoUsers(c *gin.Context) {
 		panic(err)
 	}
 }
+
+func DeleteFavoUsers(c *gin.Context) {
+	var err error
+	var playerUserId, favoUserId, matchingFormatId uint
+
+	playerUserId, err = GetUint(c, "player_user_id")
+	if err != nil {
+		log.Println(err)
+	}
+	favoUserId, err = GetUint(c, "favo_user_id")
+	if err != nil {
+		log.Println(err)
+	}
+	matchingFormatId, err = GetUint(c, "matching_format_id")
+	if err != nil {
+		log.Println(err)
+	}
+
+	err = model.DeleteFavoUsers(playerUserId, favoUserId, matchingFormatId)
+}

@@ -57,3 +57,9 @@ func GetFavoUsersById(userId uint) service.AllFavoUsers {
 
 	return allFavoUsers
 }
+
+func DeleteFavoUsers(playerUserId uint, favoUserId uint, matchingFormatId uint) error {
+	err := db.Where("player_user_id = ? and favo_user_id = ? and matching_format_id = ?", playerUserId, favoUserId, matchingFormatId).Delete(FavoUser{}).Error
+
+	return err
+}
