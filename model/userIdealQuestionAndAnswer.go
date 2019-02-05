@@ -19,7 +19,7 @@ func GetUserIdealQuestionAndAnswerByUserIDAndFormatID(userId uint, matchingForma
 	userIdealQAndA := service.UserIdealQuestionsAndAnswers{}
 	count := 0
 
-	err := db.Raw("select questions.id AS question_id, questions.name AS question_name , answers.name AS answer_name from user_ideal_question_and_answers join user_basics on (user_ideal_question_and_answers.user_id = user_basics.id) left join questions on (user_ideal_question_and_answers.question_id = questions.id) left join answers on (user_ideal_question_and_answers.answer_id = answers.id) where user_ideal_question_and_answers.user_id = ? and user_ideal_question_and_answers.matching_format_id = ?", userId, matchingFormatId).Scan(&userIdealQuestionsAndAnswers).Error
+	err := db.Raw("select questions.id AS question_id, questions.name AS question_name , answers.name AS answer_name from user_ideal_question_and_answers join user_basics on (user_ideal_question_and_answers.user_id = user_basics.id) left join questions on (user_ideal_question_and_answers.question_id = questions.id) left join answers on (user_ideal_question_and_answers.answer_id = answers.id) where user_ideal_question_and_answers.user_id = ? and user_ideal_question_and_answers.matching_format_id = ? order by question_id asc", userId, matchingFormatId).Scan(&userIdealQuestionsAndAnswers).Error
 
 	userIdealQAndA = append(userIdealQAndA, userIdealQuestionsAndAnswers[0])
 
@@ -45,7 +45,7 @@ func GetUserIdealQuestionAndAnswerByUserIDAndFormatID2(userId uint, matchingForm
 	userIdealQAndA := service.UserIdealQuestionsAndAnswers2{}
 	count := 0
 
-	err := db.Raw("select questions.id AS question_id, questions.name AS question_name , answers.name AS answer_name from user_ideal_question_and_answers join user_basics on (user_ideal_question_and_answers.user_id = user_basics.id) left join questions on (user_ideal_question_and_answers.question_id = questions.id) left join answers on (user_ideal_question_and_answers.answer_id = answers.id) where user_ideal_question_and_answers.user_id = ? and user_ideal_question_and_answers.matching_format_id = ?", userId, matchingFormatId).Scan(&DBuserIdealQuestionsAndAnswers).Error
+	err := db.Raw("select questions.id AS question_id, questions.name AS question_name , answers.name AS answer_name from user_ideal_question_and_answers join user_basics on (user_ideal_question_and_answers.user_id = user_basics.id) left join questions on (user_ideal_question_and_answers.question_id = questions.id) left join answers on (user_ideal_question_and_answers.answer_id = answers.id) where user_ideal_question_and_answers.user_id = ? and user_ideal_question_and_answers.matching_format_id = ? order by question_id asc", userId, matchingFormatId).Scan(&DBuserIdealQuestionsAndAnswers).Error
 
 	userIdealQuestionsAndAnswer2.QuestionID = DBuserIdealQuestionsAndAnswers[0].QuestionID
 	userIdealQuestionsAndAnswer2.QuestionName = DBuserIdealQuestionsAndAnswers[0].QuestionName
