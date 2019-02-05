@@ -4,12 +4,6 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
-//type //model struct {
-//    ID      uint `gorm:"primary_key"`
-//    CreatedAt time.Time
-//    UpdatedAt time.Time
-//}
-
 //基本的なユーザ情報
 type UserBasics struct {
 	gorm.Model
@@ -37,7 +31,7 @@ type UserQuestionAndAnswer struct {
 
 //ユーザごとの質疑応答(理想像)
 type UserIdealQuestionAndAnswer struct {
-	gorm.Model
+	ID               uint `gorm:"primary_key"`
 	MatchingFormatID uint `gorm:"not null"`
 	UserID           uint `gorm:"not null"`
 	QuestionID       uint `gorm:"not null"`
@@ -109,7 +103,7 @@ type MatchingFormatChoice struct {
 
 //プレイヤーにいいねしたユーザ
 type FavoUser struct {
-	gorm.Model
+	ID               uint `gorm:"primary_key"`
 	MatchingFormatID uint
 	PlayerUserID     uint
 	FavoUserID       uint

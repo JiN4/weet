@@ -72,3 +72,11 @@ func UpdateUserSpecials(c *gin.Context) {
 		log.Println(err)
 	}
 }
+
+func UpdateUserIdealSpecials(c *gin.Context) {
+	userId, err := GetUint(c, "user_id")
+	if err != nil {
+		log.Println(err)
+	}
+	model.UpdateUserIdealSpecials(c, userId)
+}

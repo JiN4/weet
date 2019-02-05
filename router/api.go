@@ -36,9 +36,13 @@ func apiRouter(api1 *gin.RouterGroup, api2 *gin.RouterGroup) {
 	//ユーザの基本情報を更新する
 	api1.PUT("/user/:user_id/update/basics", controller.UpdateUserBasics)
 
-	//ユーザの基本情報を更新する
+	//ユーザの質疑応答の自分情報を更新する
 	api1.PUT("/user/:user_id/update/specials", controller.UpdateUserSpecials)
-	//curl -w '\n' 'http://localhost:8080/api/v1/user/1/update/specials' --data 'message=1' -XPUT
+	//curl -w '\n' 'http://localhost:8080/api/v1/user/1/update/specials' --data 'question_id=1&answer_id=27' -XPUT
+
+	//ユーザの質疑応答の理想像を更新する
+	api1.PUT("/user/:user_id/update/ideal-specials", controller.UpdateUserIdealSpecials)
+	//curl -w '\n' 'http://localhost:8080/api/v1/user/1/update/ideal-specials' --data 'matching_format_id=1&question_id=1&answer_ids=3,4,47' -XPUT
 
 	//求める居住地を更新する
 	api1.PUT("/matching-prefectures/:user_id", controller.PutMatchingPrefectures)
