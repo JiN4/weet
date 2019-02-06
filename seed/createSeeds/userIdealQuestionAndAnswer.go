@@ -1604,7 +1604,7 @@ func CreateSeedUserIdealQuestionAndAnswers() {
 			"MatchingFormatID": "1",
 			"UserID":           "6",
 			"QuestionID":       "5",
-			"AnswerID":         "78",
+			"AnswerID":         "68",
 		},
 		map[string]string{
 			"MatchingFormatID": "1",

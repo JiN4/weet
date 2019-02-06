@@ -11,11 +11,6 @@ func CreateSeedMutualFavoUsers() {
 
 	mutualFavoUsers_infos := []map[string]string{
 		map[string]string{
-			"MatchingFormatID": "1",
-			"UserID1":          "1",
-			"UserID2":          "5",
-		},
-		map[string]string{
 			"MatchingFormatID": "2",
 			"UserID1":          "6",
 			"UserID2":          "1",
