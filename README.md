@@ -2676,7 +2676,7 @@ GET http://localhost:8080/api/v1/mutual-favo/user/{user_id}
 ```
 
 #### Request Parameters
-|場所|パラメータ名|指定する値|説明|
+|場所|パラメータ名|指定する値|説明|
 |:-|:-|:-|:-|
 |Path|user_id|数値|プレイヤーのID|
 
@@ -2728,10 +2728,10 @@ POST http://localhost:8080/api/v1/favo/user
 ```
 
 #### Request Parameters
-|場所|パラメータ名|指定する値|説明|
+|場所|パラメータ名|指定する値|説明|
 |:-|:-|:-|:-|
 |Body|MatchingFormatID|数値|マッチングしたマッチング形式ID|
-|Body|PlayerUserID|数値|いいね！する側のユーザーID|
+|Body|PlayerUserID|数値|いいね！する側のユーザーID|
 |Body|FavoUserID|数値|いいね！される側のユーザーID|
 
 #### Example Request
@@ -2750,10 +2750,10 @@ POST http://localhost:8080/api/v1/mutual-favo/user
 ```
 
 #### Request Parameters
-|場所|パラメータ名|指定する値|説明|
+|場所|パラメータ名|指定する値|説明|
 |:-|:-|:-|:-|
 |Body|MatchingFormatID|数値|マッチングしたマッチング形式ID|
-|Body|UserID1|数値|いいね！申請の受信ユーザーID|
+|Body|UserID1|数値|いいね！申請の受信ユーザーID|
 |Body|UserID2|数値|いいね！申請の送信ユーザーID|
 
 #### Example Request
@@ -2770,14 +2770,14 @@ PUT http://54.238.92.95:8080/api/v1/user/:user_id/update/basics
 ```
 
 #### Request Parameters
-|場所|パラメータ名|指定する値|説明|
+|場所|パラメータ名|指定する値|説明|
 |:-|:-|:-|:-|
-|Path|user_id|数値|変更したいユーザーのID|
-|Body|Image1|文字列|新しいプロフィール画像１つ目のURL|
-|Body|Image2|文字列|新しいプロフィール画像２つ目のURL|
-|Body|Image3|文字列|新しいプロフィール画像３つ目のURL|
-|Body|Hitokoto|文字列|新しい一言の文字列|
-|Body|Comment|文字列|新しい自由記入欄の文字列|
+|Path|user_id|数値|変更したいユーザーのID|
+|Body|Image1|文字列|新しいプロフィール画像１つ目のURL|
+|Body|Image2|文字列|新しいプロフィール画像２つ目のURL|
+|Body|Image3|文字列|新しいプロフィール画像３つ目のURL|
+|Body|Hitokoto|文字列|新しい一言の文字列|
+|Body|Comment|文字列|新しい自由記入欄の文字列|
 
 #### Example Request
 ```
@@ -2794,11 +2794,11 @@ PUT http://54.238.92.95:8080/api/v1/user/:user_id/update/specials
 ```
 
 #### Request Parameters
-|場所|パラメータ名|指定する値|説明|
+|場所|パラメータ名|指定する値|説明|
 |:-|:-|:-|:-|
-|Path|user_id|数値|変更したいユーザーのID|
-|Body|question_id|数値|更新したい質問のID|
-|Body|answer_id|数値|新しい自分の回答|
+|Path|user_id|数値|変更したいユーザーのID|
+|Body|question_id|数値|更新したい質問のID|
+|Body|answer_id|数値|新しい自分の回答|
 
 #### Example Request
 ```
@@ -2813,11 +2813,11 @@ PUT http://localhost:8080/api/v1/user/:user_id/update/ideal-specials
 ```
 
 #### Request Parameters
-|場所|パラメータ名|指定する値|説明|
+|場所|パラメータ名|指定する値|説明|
 |:-|:-|:-|:-|
-|Path|user_id|数値|変更したいユーザーのID|
-|Body|question_id|文字列|更新したい質問のID|
-|Body|answer_ids|文字列|新しい自分の回答群|
+|Path|user_id|数値|変更したいユーザーのID|
+|Body|question_id|文字列|更新したい質問のID|
+|Body|answer_ids|文字列|新しい自分の回答群|
 
 #### Example Request
 ```
@@ -2832,10 +2832,10 @@ PUT http://localhost:8080/api/v1/matching-prefectures/:user_id
 ```
 
 #### Request Parameters
-|場所|パラメータ名|指定する値|説明|
+|場所|パラメータ名|指定する値|説明|
 |:-|:-|:-|:-|
-|Path|user_id|数値|変更したいユーザーのID|
-|Body|PrefecturesID|文字列|絞り込みたい居住地のID群（1:北海道から47:沖縄県まで連番）|
+|Path|user_id|数値|変更したいユーザーのID|
+|Body|PrefecturesID|文字列|絞り込みたい居住地のID群（1:北海道から47:沖縄県まで連番）|
 
 #### Example Request
 ```
@@ -2851,9 +2851,9 @@ PUT http://localhost:8080/api/v1/matching-sexes/:user_id
 ```
 
 #### Request Parameters
-|場所|パラメータ名|指定する値|説明|
+|場所|パラメータ名|指定する値|説明|
 |:-|:-|:-|:-|
-|Path|user_id|数値|変更したいユーザーのID|
+|Path|user_id|数値|変更したいユーザーのID|
 |Body|SexID|数値|絞り込みたい性別の種類（1:男性 2:女性 3:両方）|
 
 #### Example Request
@@ -2870,9 +2870,9 @@ PUT http://localhost:8080/api/v1/matching-ages/:user_id
 ```
 
 #### Request Parameters
-|場所|パラメータ名|指定する値|説明|
+|場所|パラメータ名|指定する値|説明|
 |:-|:-|:-|:-|
-|Path|user_id|数値|変更したいユーザーのID|
+|Path|user_id|数値|変更したいユーザーのID|
 |Body|FirstAge|数値|絞り込みたい年齢の下限の数値|
 |Body|LastAge|数値|絞り込みたい年齢の上限の数値|
 
@@ -2890,10 +2890,10 @@ PUT http://localhost:8080/api/v1/matching-format-choices/:user_id
 ```
 
 #### Request Parameters
-|場所|パラメータ名|指定する値|説明|
+|場所|パラメータ名|指定する値|説明|
 |:-|:-|:-|:-|
-|Path|user_id|数値|変更したいユーザーのID|
-|Body|Love|数値|変更しない場合は現在、変更する場合は変更後の値（0:マッチング対象にならない/1:マッチング対象になる）|
+|Path|user_id|数値|変更したいユーザーのID|
+|Body|Love|数値|変更しない場合は現在、変更する場合は変更後の値（0:マッチング対象にならない/1:マッチング対象になる）|
 |Body|Marriage|数値|変更しない場合は現在、変更する場合は変更後の値（0:マッチング対象にならない/1:マッチング対象になる）|
 |Body|Roommate|数値|変更しない場合は現在、変更する場合は変更後の値（0:マッチング対象にならない/1:マッチング対象になる）|
 
@@ -2910,11 +2910,11 @@ DELETE http://localhost:8080/api/v1/favo/player/:player_user_id/favo-user/:favo_
 ```
 
 #### Request Parameters
-|場所|パラメータ名|指定する値|説明|
+|場所|パラメータ名|指定する値|説明|
 |:-|:-|:-|:-|
-|Path|player_user_id|数値|変更したいユーザーのID|
-|Path|favo_user_id|数値|いいね！された一覧から削除したいユーザーのID|
-|Path|matching_format_id|数値|いいね！してきた削除したいユーザーのマッチング形式のID|
+|Path|player_user_id|数値|変更したいユーザーのID|
+|Path|favo_user_id|数値|いいね！された一覧から削除したいユーザーのID|
+|Path|matching_format_id|数値|いいね！してきた削除したいユーザーのマッチング形式のID|
 
 #### Example Request
 ```
