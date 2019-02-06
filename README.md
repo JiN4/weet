@@ -13,7 +13,7 @@ WEET Back-end
 
 ## APIドキュメント
 
-### ユーザ情報をIDで絞り込んで取得する[GET]
+### ユーザ情報をIDで絞り込んで取得する[GET]
 
 #### エンドポイント
 ```
@@ -23,7 +23,7 @@ GET http://localhost:8080/api/v1/user/{user_id}
 #### Request Parameters
 場所|パラメータ名|指定する値|説明|
 |:-|:-|:-|:-|
-|Path|user_id|数値|取得したいユーザーのID|
+|Path|user_id|数値|取得したいユーザーのID|
 
 #### Example Response
 + Response 200 (application/json)
@@ -2798,7 +2798,7 @@ PUT http://54.238.92.95:8080/api/v1/user/:user_id/update/specials
 |:-|:-|:-|:-|
 |Path|user_id|数値|変更したいユーザーのID|
 |Body|question_id|数値|更新したい質問のID|
-|Body|answer_id|数値|新しい自分の回答|
+|Body|answer_id|数値|新しい自分の回答|
 
 #### Example Request
 ```
@@ -2817,7 +2817,7 @@ PUT http://localhost:8080/api/v1/user/:user_id/update/ideal-specials
 |:-|:-|:-|:-|
 |Path|user_id|数値|変更したいユーザーのID|
 |Body|question_id|文字列|更新したい質問のID|
-|Body|answer_ids|文字列|新しい自分の回答群|
+|Body|answer_ids|文字列|新しい自分の回答群|
 
 #### Example Request
 ```
@@ -2914,7 +2914,7 @@ DELETE http://localhost:8080/api/v1/favo/player/:player_user_id/favo-user/:favo_
 |:-|:-|:-|:-|
 |Path|player_user_id|数値|変更したいユーザーのID|
 |Path|favo_user_id|数値|いいね！された一覧から削除したいユーザーのID|
-|Path|matching_format_id|数値|いいね！してきた削除したいユーザーのマッチング形式のID|
+|Path|matching_format_id|数値|いいね！してきた削除したいユーザーのマッチング形式のID|
 
 #### Example Request
 ```
