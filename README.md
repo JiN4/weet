@@ -437,7 +437,7 @@ GET http://localhost:8080/api/v1/user/{user_id}
 ---
 
 
-### ユーザ情報をIDで絞り込んで取得する(AnswerNameが配列)[GET]
+### ユーザ情報をIDで絞り込んで取得する(AnswerNameが配列)[GET]
 
 #### エンドポイント
 ```
@@ -447,7 +447,7 @@ GET http://localhost:8080/api/v2/user/{user_id}
 #### Request Parameters
 |場所|パラメータ名|指定する値|説明|
 |:-|:-|:-|:-|
-|Path|user_id|数値|取得したいユーザーのID|
+|Path|user_id|数値|取得したいユーザーのID|
 
 #### Example Response
 + Response 200 (application/json)
