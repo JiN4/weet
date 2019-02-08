@@ -68,7 +68,7 @@ WEET Back-end
      それぞれ、入力が完了後OKを選択。<br>
   
   最後に<br>
-  <code>dep ensure</code><br>
+  <code>dep ensure</code>(Enter)<br>
   <code>go run migration/main.go</code>(Enter) <br>
   <code>go run seed/main.go</code>(Enter) <br>
   <code>go run main.go</code>(Enter) <br>
