@@ -9,7 +9,75 @@ WEET Back-end
 - DateBase:Mysql
 
 ## Install
-- 追加予定
+### Windows 10 でサーバーを立ち上げる場合（主にサーバー動作確認）
+  
++ Golang インストール
+  
+  https://golang.org/dl/
+  
+  Microsoft Windows の Golang1.11をインストールします。(2019年2月6日時点：1.11.5)
+  
+  "コントロールパネル->システムとセキュリティ->システム-> <br>
+  システムの詳細設定->環境変数->環境変数を編集->ユーザー環境変数->Path->編集"にて<br>
+  <code>C:\Users\あなたのユーザ名(各PCで編集)\go\bin</code> になっているか確認します。<br><br>
+  設定されていない場合は
+  "コントロールパネル->システムとセキュリティ->システム->システムの詳細設定-> <br>
+  環境変数->環境変数を編集->ユーザー環境変数->Path選択後->編集->新規"にて<br>
+  <code>C:\Users\あなたのユーザ名(各PCで編集)\go\bin</code> を追加してOKを選択します。 <br>
+
+ 
++ MySQL8.0 インストール
+ 
+  https://dev.mysql.com/downloads/mysql/
+  
+  MySQL8.0をインストールします。デフォルトでOK・次へ・Nextなどを押してください。
+  <br>パスワードを設定します。
+  <br><code>※Port:3306</code>であることを確認してください。
+  <br>※パスワード(Current Root Password)は再度使うので覚えておいてください。
+  
+  "コントロールパネル->システムとセキュリティ->システム->システムの詳細設定-> <br>
+  環境変数->環境変数を編集->ユーザー環境変数->Path->編集"にて<br>
+  <code>C:\Program Files\MySQL\MySQL Server 8.0\bin</code><br>
+  設定されていない場合は<br>
+  "コントロールパネル->システムとセキュリティ->システム->システムの詳細設定-> <br>
+  環境変数->環境変数を編集->ユーザー環境変数->Path選択後->編集->新規"にて<br>
+  <code>C:\Program Files\MySQL\MySQL Server 8.0\bin</code> を追加してOKを選択します。 <br>
+  
+  フォルダパス：<code>C:\Users\あなたのユーザ名(各PCで編集)\go\src\github.com</code> のフォルダを作成し<br>
+  コマンドプロンプト(cmd)入力：<code> cd C:\Users\あなたのユーザ名(各PCで編集)\go\src\github.com </code>(Enter) を入力します。<br>
+  そして <code> git clone https://github.com/gs-group2019/weet.git </code> (Enter)  を入力します。
+  
+  git を 用意していないPC環境であれば<br>
+  https://github.com/gs-group2019/weet を ウェブブラウザに入力しGitHubサイトに<br>
+  アクセスします。安心してください、私たちWeet開発チームのソースコード公開サイトです。
+  
+  アクセスしたら、緑色の "Clone or download" を選択します。<br>
+  そして、Download ZIP を選択します。<br>
+  ダウンロードが完了したら、<code>C:\Users\あなたのユーザ名(各PCで編集)\go\src\github.com</code>にすべて展開します。<br>
+  コマンドプロンプト(cmd)に <code>cd C:\Users\あなたのユーザ名(各PCで編集)\go\src\github.com\weet</code>(Enter)を入力します。<br>
+  次に<code>go get -u github.com/golang/dep/cmd/dep</code>(Enter)を入力します。<br>
+  
+    
+  コマンドプロンプト(cmd)に <code>mysql -u root -p</code> (Enter)
+  <code>Enter password:</code>と表示されるので先ほど設定したパスワードを入力します。<br>
+  そして<code> mysql> </code>が表示されたら <code>create database gs_group_weet;</code> (Enter) を入力し、 <code>exit</code> (Enter)を入力します。
+  
+  "コントロールパネル->システムとセキュリティ->システム->システムの詳細設定-> <br>
+     環境変数->環境変数を編集->ユーザー環境変数->Path->新規"->新しいユーザー変数:変数名&変数値にて <br>
+     変数名 <code>MYSQL_USER</code> 変数値 <code>root</code><br>
+     変数名 <code>MYSQL_PASS</code> 変数値 <code>MySQLで設定したパスワードを入力</code><br>
+     変数名 <code>MYSQL_DATABASE</code> 変数値 <code>gs_group_weet</code><br>
+     それぞれ、入力が完了したらOKを選択します。<br>
+  
+  最後に<br>
+  <code>dep ensure</code><br>
+  <code>go run migration/main.go</code>(Enter) <br>
+  <code>go run seed/main.go</code>(Enter) <br>
+  <code>go run main.go</code>(Enter) <br>
+  を順に入力することでサーバーが起動します。<br>
+  バックエンド側の作業は終了です。<br>
+  
+  ※(Enter) はエンターキーのことです。
 
 ## APIドキュメント
 
