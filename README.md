@@ -15,68 +15,67 @@ WEET Back-end
   
   https://golang.org/dl/
   
-  Microsoft Windows の Golang1.11をインストールします。(2019年2月6日時点：1.11.5)
+  Microsoft Windows の Golang1.11をインストールします。(2019年2月8日時点：1.11.5)
   
   "コントロールパネル->システムとセキュリティ->システム-> <br>
   システムの詳細設定->環境変数->環境変数を編集->ユーザー環境変数->Path->編集"にて<br>
-  <code>C:\Users\あなたのユーザ名(各PCで編集)\go\bin</code> になっているか確認します。<br><br>
-  設定されていない場合は
+  <code>C:\Users\あなたのユーザ名(各PCで編集)\go\bin</code> になっているか確認。<br><br>
+  設定されていない場合
   "コントロールパネル->システムとセキュリティ->システム->システムの詳細設定-> <br>
   環境変数->環境変数を編集->ユーザー環境変数->Path選択後->編集->新規"にて<br>
-  <code>C:\Users\あなたのユーザ名(各PCで編集)\go\bin</code> を追加してOKを選択します。 <br>
+  <code>C:\Users\あなたのユーザ名(各PCで編集)\go\bin</code> を追加してOKを選択。 <br>
 
  
 + MySQL8.0 インストール
  
   https://dev.mysql.com/downloads/mysql/
   
-  MySQL8.0をインストールします。デフォルトでOK・次へ・Nextなどを押してください。
-  <br>パスワードを設定します。
-  <br><code>※Port:3306</code>であることを確認してください。
-  <br>※パスワード(Current Root Password)は再度使うので覚えておいてください。
+  MySQL8.0をインストール。デフォルトでOK・次へ・Nextなどを選択。
+  <br>パスワードを設定。
+  <br><code>※Port:3306</code>であることを確認。
+  <br>※パスワード(Current Root Password)は再度使用。
   
   "コントロールパネル->システムとセキュリティ->システム->システムの詳細設定-> <br>
   環境変数->環境変数を編集->ユーザー環境変数->Path->編集"にて<br>
   <code>C:\Program Files\MySQL\MySQL Server 8.0\bin</code><br>
-  設定されていない場合は<br>
+  設定されていない場合<br>
   "コントロールパネル->システムとセキュリティ->システム->システムの詳細設定-> <br>
   環境変数->環境変数を編集->ユーザー環境変数->Path選択後->編集->新規"にて<br>
-  <code>C:\Program Files\MySQL\MySQL Server 8.0\bin</code> を追加してOKを選択します。 <br>
+  <code>C:\Program Files\MySQL\MySQL Server 8.0\bin</code> を追加してOKを選択。 <br>
   
   フォルダパス：<code>C:\Users\あなたのユーザ名(各PCで編集)\go\src\github.com</code> のフォルダを作成し<br>
-  コマンドプロンプト(cmd)入力：<code> cd C:\Users\あなたのユーザ名(各PCで編集)\go\src\github.com </code>(Enter) を入力します。<br>
-  そして <code> git clone https://github.com/gs-group2019/weet.git </code> (Enter)  を入力します。
+  コマンドプロンプト(cmd)入力：<code> cd C:\Users\あなたのユーザ名(各PCで編集)\go\src\github.com </code>(Enter) を入力。<br>
+  そして <code> git clone https://github.com/gs-group2019/weet.git </code> (Enter)  を入力。
   
-  git を 用意していないPC環境であれば<br>
-  https://github.com/gs-group2019/weet を ウェブブラウザに入力しGitHubサイトに<br>
-  アクセスします。安心してください、私たちWeet開発チームのソースコード公開サイトです。
+  git を 用意していないPC環境の場合<br>
+  https://github.com/gs-group2019/weet を ウェブブラウザに入力しGitHubサイトにアクセス。<br>
   
-  アクセスしたら、緑色の "Clone or download" を選択します。<br>
-  そして、Download ZIP を選択します。<br>
-  ダウンロードが完了したら、<code>C:\Users\あなたのユーザ名(各PCで編集)\go\src\github.com</code>にすべて展開します。<br>
-  コマンドプロンプト(cmd)に <code>cd C:\Users\あなたのユーザ名(各PCで編集)\go\src\github.com\weet</code>(Enter)を入力します。<br>
-  次に<code>go get -u github.com/golang/dep/cmd/dep</code>(Enter)を入力します。<br>
+  アクセス後、緑色の "Clone or download" を選択。<br>
+  そして、Download ZIP を選択。<br>
+  ダウンロード完了後、<code>C:\Users\あなたのユーザ名(各PCで編集)\go\src\github.com</code>にすべて展開。<br>
+  コマンドプロンプト(cmd)に <code>cd C:\Users\あなたのユーザ名(各PCで編集)\go\src\github.com\weet</code>(Enter)を入力。<br>
+  次に<code>go get -u github.com/golang/dep/cmd/dep</code>(Enter)を入力。<br>
   
   コマンドプロンプト(cmd)に <code>mysql -u root -p</code> (Enter)
-  <code>Enter password:</code>と表示されるので先ほど設定したパスワードを入力します。<br>
-  そして<code> mysql> </code>が表示されたら <code>create database gs_group_weet;</code> (Enter) を入力し、 <code>exit</code> (Enter)を入力します。
+  <code>Enter password:</code>と表示されるので先ほど設定したパスワードを入力。<br>
+  そして<code> mysql> </code>が表示されたら <code>create database gs_group_weet;</code> (Enter) を入力し、 <code>exit</code> (Enter)を入力。
   
   "コントロールパネル->システムとセキュリティ->システム->システムの詳細設定-> <br>
-     環境変数->環境変数を編集->ユーザー環境変数->Path->新規"->新しいユーザー変数:変数名&変数値にて <br>
+     環境変数->環境変数を編集->ユーザー環境変数->Path->新規->新しいユーザー変数:変数名&変数値"にて <br>
      変数名 <code>MYSQL_USER</code> 変数値 <code>root</code><br>
      変数名 <code>MYSQL_PASS</code> 変数値 <code>MySQLで設定したパスワードを入力</code><br>
      変数名 <code>MYSQL_DATABASE</code> 変数値 <code>gs_group_weet</code><br>
-     それぞれ、入力が完了したらOKを選択します。<br>
+     それぞれ、入力が完了後OKを選択。<br>
   
   最後に<br>
   <code>dep ensure</code><br>
   <code>go run migration/main.go</code>(Enter) <br>
   <code>go run seed/main.go</code>(Enter) <br>
   <code>go run main.go</code>(Enter) <br>
-  を順に入力することでサーバーが起動します。<br>
-  バックエンド側の作業は終了です。<br>
+  を順に入力しサーバーが起動。<br>
+  バックエンド側作業終了。<br>
   
-  ※(Enter) はエンターキーのことです。
+  ※(Enter) はエンターキーのこと。
 
 ## APIドキュメント
 
