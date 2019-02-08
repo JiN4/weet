@@ -27,7 +27,6 @@ func GetDBConn() *gorm.DB {
 func GetDBConfig() (string, string) {
 	var config config.Config
 	envconfig.Process("", &config)
-	mysql := config.MySQL.User + ":" + config.MySQL.Pass + "!@tcp(" + config.MySQL.Port + ")/" + config.MySQL.Database + "?charset=utf8&parseTime=True&loc=Local"
+	mysql := config.MySQL.User + ":" + config.MySQL.Pass + "@tcp(" + config.MySQL.Port + ")/" + config.MySQL.Database + "?charset=utf8&parseTime=True&loc=Local"
 	return "mysql", mysql
-
-} //	//return "mysql", "root:kobedenshi@tcp(gs-group-weet-mysql.cnvtlozgscam.ap-northeast-1.rds.amazonaws.com:3306)/gs_group_weet?charset=utf8&parseTime=True&loc=Local"
+}

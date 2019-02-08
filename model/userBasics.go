@@ -108,17 +108,3 @@ func GetCandidateMatchingUserId(userId uint, matchingPrefectures []uint, matchin
 	fmt.Println(userBasics)
 	return userBasics[0].ID, err
 }
-
-/*
-//基本的な情報
-type UserBasics struct {
-	FormatName string `json:"format_name"`
-	UserName   string `json:"user_name"`
-	Image1     string `json:"image1"`
-	Image2     string `json:"image2"`
-	Image3     string `json:"image3"`
-	Age        string `json:"age"`
-	Hitokoto   string `json:"hitokoto"`
-	Comment    string `json:"comment"`
-}
-*/
