@@ -56,7 +56,7 @@ WEET Back-end
   コマンドプロンプト(cmd)に <code>cd C:\Users\あなたのユーザ名(各PCで編集)\go\src\github.com\weet</code>(Enter)を入力。<br>
   次に<code>go get -u github.com/golang/dep/cmd/dep</code>(Enter)を入力。<br>
   
-  コマンドプロンプト(cmd)に <code>mysql -u root -p</code> (Enter)
+  コマンドプロンプト(cmd)に <code>mysql -u root -p</code> (Enter)<br>
   <code>Enter password:</code>と表示されるので先ほど設定したパスワードを入力。<br>
   そして<code> mysql> </code>が表示されたら <code>create database gs_group_weet;</code> (Enter) を入力し、 <code>exit</code> (Enter)を入力。
   
